@@ -9,4 +9,9 @@ These documents contain sensitive information owned by the company and are subje
 ## API Documents
 ------------------------------------------------------------------------------------
 Although I don't have extensive experience with API documentation, I am a dedicated self-learner who has taken the initiative to explore this field. Recently, I have been teaching myself API documentation techniques and tools, including Swagger. I even created a sample API documentation using Swagger and successfully published it. This hands-on experience has fueled my enthusiasm and passion for API documentation. I am a proactive individual who actively seeks opportunities to expand my knowledge and skills in this domain. As an avid learner, I am excited to continue exploring and mastering API documentation to contribute effectively in this field.
-- [Culinary Course API](
+- [Culinary Course API](https://github.com/vyshnavigu/Technical-Writer-Portfolio---Vyshnavi-Gurram/blob/main/API%20Documents/Culinary%20Course%20API.md)
+## User Manuals
+---------------------------------------------------------------------
+The user manuals that I have worked on are materials that contain valuable proprietary information and are meant solely for internal use. However, I am more than willing to provide you with a sample that I have personally worked on. This sample can provide insights into the structure, formatting, and general content that could be useful in developing a user manual.
+Included in my portfolio is a sample user manual for a banking application. This user manual showcases my ability to translate complex technical concepts into user-friendly documentation. It covers topics such as installation, login and authentication, dashboard navigation, funds transfer, bill payments, deposits and withdrawals, account management, support information, and frequently asked questions (FAQs). This sample user manual demonstrates my commitment to delivering comprehensive and easy-to-understand documentation that enhances the user experience. Feel free to explore the user manual sample to gain insights into my technical writing capabilities.
+- [Banking Application User Manual]()
