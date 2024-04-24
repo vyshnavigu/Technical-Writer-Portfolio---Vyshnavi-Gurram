@@ -11,9 +11,33 @@ https://app.swaggerhub.com/apis-docs/VYSHNAVIGU_1/CulinaryCourseAPI/9.9.9
 ## Authentication
 ------------------------------------------------------
 To access most endpoints of this API, you need to authenticate using JWT (JSON Web Tokens). You can obtain a token by logging in with your credentials.
+## API functions
+-----------------------------------------------------
+
+Ref   | Function                 | Description                                  | API End Point                                              | Request Type
+------|--------------------------|----------------------------------------------|-----------------------------------------------------------|-------------
+1.1   | Login                    | Authenticate and obtain an access token.    | /login                                                     | POST 
+1.2   | Logout                   | Log out the currently authenticated user.  | /logout                                                    | POST 
+2.1   | Create User              | Create a new user account.                  | /users                                                     | POST 
+2.2   | Get User by Username    | Retrieve user details by username.         | /users/{username}                                         | GET 
+2.3   | Update User              | Update user details.                        | /users/{username}                                         | PUT 
+2.4   | Delete User              | Delete a user account.                      | /users/{username}                                         | DELETE 
+3.1   | List All Courses         | Retrieve a list of available culinary courses. | /courses                                             | GET 
+3.2   | Create Course            | Add a new culinary course.                 | /courses                                                   | POST 
+3.3   | Get Course Details      | Retrieve the details of a specific culinary course. | /courses/{courseId}                                   | GET 
+3.4   | Update Course            | Update the details of a specific culinary course. | /courses/{courseId}                                   | PUT 
+3.5   | Delete Course            | Delete a specific culinary course.         | /courses/{courseId}                                       | DELETE 
+4.1   | List Categories in a Course | Retrieve a list of categories within a specific culinary course. | /courses/{courseId}/categories                     | GET 
+4.2   | Create Category          | Add a new category to a specific culinary course. | /courses/{courseId}/categories                             | POST 
+4.3   | Delete Category          | Delete a specific category from a culinary course. | /courses/{courseId}/categories/{categoryId}           | DELETE 
+5.1   | List Recipes in a Category | Retrieve a list of recipes within a specific category of a culinary course. | /courses/{courseId}/categories/{categoryId}/recipes | GET 
+5.2   | Create Recipe            | Add a new recipe to a specific category of a culinary course. | /courses/{courseId}/categories/{categoryId}/recipes     | POST 
+5.3   | Update Recipe            | Update the details of a specific recipe within a category of a culinary course. | /courses/{courseId}/categories/{categoryId}/recipes/{recipeId} | PUT 
+5.4   | Delete Recipe            | Delete a specific recipe from a category of a culinary course. | /courses/{courseId}/categories/{categoryId}/recipes/{recipeId} | DELETE 
+
 ## Endpoints
 ---------------------------------------------------------------
-### 1. Login
+### 1.1. Login
 
 | End Point | Method | Description |
 |-----------|--------|-------------|
@@ -37,17 +61,17 @@ To access most endpoints of this API, you need to authenticate using JWT (JSON W
     "token": "your_access_token"
   }
 
-### 2. Logout
+### 1.2. Logout
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
 | /logout   | POST   | Log out the currently authenticated user. | Required (Bearer Token) |
 
-### 3. User Management
+### 2. User Management
 
 Manage user accounts using the following endpoints:
 
-#### 3.1. Create User
+#### 2.1. Create User
 
 | End Point | Method | Description |
 |-----------|--------|-------------|
@@ -73,7 +97,7 @@ Manage user accounts using the following endpoints:
     "username": "new_user"
   }
 
-#### 3.2. Get User by Username
+#### 2.2. Get User by Username
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
@@ -92,7 +116,7 @@ Manage user accounts using the following endpoints:
     "username": "desired_username"
   }
 
-#### 3.3. Update User
+#### 2.3. Update User
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
@@ -116,7 +140,7 @@ Manage user accounts using the following endpoints:
     "username": "desired_username"
   }
 
-#### 3.4. Delete User
+#### 2.4. Delete User
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
@@ -130,11 +154,11 @@ Manage user accounts using the following endpoints:
 
 - **Response:** HTTP Status Code 204 (No Content)
 
-### 4. Culinary Courses
+### 3. Culinary Courses
 
 Manage culinary courses using the following endpoints:
 
-#### 4.1. List All Courses
+#### 3.1. List All Courses
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
@@ -152,7 +176,7 @@ Manage culinary courses using the following endpoints:
     // Additional course objects
   ]
 
-#### 4.2. Create Course
+#### 3.2. Create Course
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
@@ -182,7 +206,7 @@ Manage culinary courses using the following endpoints:
     "price": 29.99
   }
 
-#### 4.3. Get Course Details
+#### 3.3. Get Course Details
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
@@ -203,7 +227,7 @@ Manage culinary courses using the following endpoints:
     "price": 26.99
   }
   
-#### 4.4. Update Course
+#### 3.4. Update Course
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
@@ -234,7 +258,7 @@ Manage culinary courses using the following endpoints:
     "price": 24.99
   }
 
-#### 4.5. Delete Course
+#### 3.5. Delete Course
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
@@ -248,11 +272,11 @@ Manage culinary courses using the following endpoints:
 
 - **Response:** HTTP Status Code 204 (No Content)
 
-### 5. Recipe Categories
+### 4. Recipe Categories
 
 Manage recipe categories within culinary courses using the following endpoints:
 
-#### 5.1. List Categories in a Course
+#### 4.1. List Categories in a Course
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
@@ -274,7 +298,7 @@ Manage recipe categories within culinary courses using the following endpoints:
     // Additional category objects
   ]
 
-#### 5.2. Create Category
+#### 4.2. Create Category
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
@@ -299,7 +323,7 @@ Manage recipe categories within culinary courses using the following endpoints:
     "name": "Soups"
   }
 
-#### 5.3. Delete Category
+#### 4.3. Delete Category
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
@@ -314,11 +338,11 @@ Manage recipe categories within culinary courses using the following endpoints:
 
 - **Response:** HTTP Status Code 204 (No Content)
 
-### 6. Recipes
+### 5. Recipes
 
 Manage recipes within recipe categories using the following endpoints:
 
-#### 6.1. List Recipes in a Category
+#### 5.1. List Recipes in a Category
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
@@ -349,7 +373,7 @@ Manage recipes within recipe categories using the following endpoints:
     // Additional recipe objects
   ]
 
-#### 6.2. Create Recipe
+#### 5.2. Create Recipe
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
@@ -394,7 +418,7 @@ Manage recipes within recipe categories using the following endpoints:
     "image_url": "https://example.com/egg_bites_image.jpg"
   }
 
-#### 6.3. Update Recipe
+#### 5.3. Update Recipe
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
@@ -448,7 +472,7 @@ Manage recipes within recipe categories using the following endpoints:
   "image_url": "https://example.com/omelette_image.jpg"
   }
 
-#### 6.4. Delete Recipe
+#### 5.4. Delete Recipe
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
