@@ -68,7 +68,7 @@ Ref   | Function                 | Description                                  
 | /logout   | POST   | Log out the currently authenticated user. | Required (Bearer Token) |
 
 ### 2. User Management
-
+----------------------------------------------------
 Manage user accounts using the following endpoints:
 
 #### 2.1. Create User
@@ -155,7 +155,7 @@ Manage user accounts using the following endpoints:
 - **Response:** HTTP Status Code 204 (No Content)
 
 ### 3. Culinary Courses
-
+--------------------------------------------------------------------
 Manage culinary courses using the following endpoints:
 
 #### 3.1. List All Courses
@@ -273,7 +273,7 @@ Manage culinary courses using the following endpoints:
 - **Response:** HTTP Status Code 204 (No Content)
 
 ### 4. Recipe Categories
-
+----------------------------------------------------------------
 Manage recipe categories within culinary courses using the following endpoints:
 
 #### 4.1. List Categories in a Course
@@ -339,7 +339,7 @@ Manage recipe categories within culinary courses using the following endpoints:
 - **Response:** HTTP Status Code 204 (No Content)
 
 ### 5. Recipes
-
+---------------------------------------------------------
 Manage recipes within recipe categories using the following endpoints:
 
 #### 5.1. List Recipes in a Category
@@ -488,3 +488,5 @@ Manage recipes within recipe categories using the following endpoints:
 
 - **Response:** HTTP Status Code 204 (No Content)
 ## Conclusion
+The API follows a RESTful architecture, with clear and consistent endpoint naming conventions and request/response structures. Input fields for each function are well-defined, ensuring data integrity and consistency throughout interactions with the API. Similarly, output fields provide comprehensive information, allowing users to easily consume and utilize the data returned by API requests.
+Overall, the Culinary Course API provides a robust platform for culinary education and recipe management, empowering developers to build innovative applications and services in the culinary domain.
