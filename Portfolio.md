@@ -13,7 +13,7 @@ Although I don't have extensive experience with API documentation, I am a dedica
 ## Release Notes
 --------------------------------------------------------------
 Included in my portfolio is a sample of release notes, showcasing my proficiency in creating clear and concise documentation for software releases. The release notes provide a comprehensive overview of new features, enhancements, bug fixes, and known issues for a specific software version. This sample demonstrates my ability to effectively communicate complex technical information to various audiences, including developers, testers, and end-users. The release notes are structured in a user-friendly format, allowing readers to quickly identify and understand the changes implemented in the software.
-- [Release Notes]()
+- [Release Notes](https://github.com/vyshnavigu/Technical-Writer-Portfolio---Vyshnavi-Gurram/blob/main/Release%20Notes/Release%20Notes.md)
 ## User Manuals
 ---------------------------------------------------------------------
 The user manuals that I have worked on are materials that contain valuable proprietary information and are meant solely for internal use. However, I am more than willing to provide you with a sample that I have personally worked on. This sample can provide insights into the structure, formatting, and general content that could be useful in developing a user manual.
