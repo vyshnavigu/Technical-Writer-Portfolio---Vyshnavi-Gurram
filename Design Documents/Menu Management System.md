@@ -122,3 +122,6 @@ This design document outlines the specifications and design considerations for t
 | Test Scenario Description | Functional Specification | Prerequisite | Notes                   |
 |---------------------------|--------------------------|--------------|-------------------------|
 | Update Menu Item Price    | Verify system updates menu item price as expected. | Manager has permission to modify menu settings. | Ensure validation rules are enforced. |
+## Conclusion
+-------------------------------------------------------------------------------
+Overall, this design document provides s foundation for the successful development and deployment of a restaurant website's menu management system. This helps in an enhanced user experience and improved efficiency for both managers and customers alike.
