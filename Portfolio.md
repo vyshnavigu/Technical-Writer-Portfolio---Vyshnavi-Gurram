@@ -4,4 +4,4 @@ I am an experienced technical writer with a strong background in creating clear 
 ## Design Documents
 -----------------------------------------------------------------------------------------------------
 These documents contain sensitive information owned by the company and are subject to strict confidentiality agreements. However, I would be more than happy to provide you with a sample template that I have personally worked on. This template can give you a general idea of the design elements and structure that I have experience with. While it may not encompass the specific details of the confidential documents, it can still serve as a helpful reference to understand my work
-[Menu Management System] (Design Documents/Menu Management System.md)
+[Menu Management System](Design Documents/Menu Management System.md)
