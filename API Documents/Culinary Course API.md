@@ -15,16 +15,15 @@ To access most endpoints of this API, you need to authenticate using JWT (JSON W
 ---------------------------------------------------------------
 ### 1. Login
 
-| End Point | Method | Description | 
-|-----------|--------|-------------|
-| /login   | POST   | Authenticate and obtain an accesss token. |
-
+| End Point | Method | Description | Authentication |
+|-----------|--------|-------------|----------------|
+| /login    | POST   | Creates a new user account with the provided username and password. This function allows new users to register for the culinary course platform, providing them access to various features and functionalities. | - |
 #### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
-| username   | string    | Username|
-| password   | string    | Password|
+| username   | string    | Username of the new user.|
+| password   | string    | Password of the new user.|
 
 - **Request:**
   ```json
@@ -40,10 +39,9 @@ To access most endpoints of this API, you need to authenticate using JWT (JSON W
 
 ### 2. Logout
 
-- **Endpoint:** `/logout`
-- **Method:** POST
-- **Description:** Log out the currently authenticated user.
-- **Authentication:** Required (Bearer Token)
+| End Point | Method | Description | Authentication |
+|-----------|--------|-------------|----------------|
+| /logout   | POST   | Log out the currently authenticated user. | Required (Bearer Token) |
 
 ### 3. User Management
 
@@ -51,9 +49,17 @@ Manage user accounts using the following endpoints:
 
 #### 3.1. Create User
 
-- **Endpoint:** `/users`
-- **Method:** POST
-- **Description:** Create a new user account.
+| End Point | Method | Description |
+|-----------|--------|-------------|
+| /users  | POST   | Creates a new user account with the provided username and password. This function allows new users to register for the culinary course platform, providing them access to various features and functionalities.|
+
+#### Data Object Definition
+
+| Data Field | Data Type | Description |
+|------------|-----------|-------------|
+| username   | string    | Username for the new user.|
+| password   | string    | Password for the new user.|
+
 - **Request:**
   ```json
   {
@@ -69,10 +75,16 @@ Manage user accounts using the following endpoints:
 
 #### 3.2. Get User by Username
 
-- **Endpoint:** `/users/{username}`
-- **Method:** GET
-- **Description:** Retrieve user details by username.
-- **Authentication:** Required (Bearer Token)
+| End Point | Method | Description | Authentication |
+|-----------|--------|-------------|----------------|
+| /users/{username}  | GET   | Retrieves user details by their username. This function allows administrators or other users to view information about a specific user, such as their ID and username.| Required (Bearer Token)|
+
+#### Data Object Definition
+
+| Data Field | Data Type | Description |
+|------------|-----------|-------------|
+| username   | string    | Username for the user to retrieve their details.|
+
 - **Response:**
   ```json
   {
@@ -82,10 +94,16 @@ Manage user accounts using the following endpoints:
 
 #### 3.3. Update User
 
-- **Endpoint:** `/users/{username}`
-- **Method:** PUT
-- **Description:** Update user details.
-- **Authentication:** Required (Bearer Token)
+| End Point | Method | Description | Authentication |
+|-----------|--------|-------------|----------------|
+| /users/{username}  | PUT   | Updates the password of an existing user account. This function enables users to change their passwords for security reasons or due to a forgotten password, providing them with the ability to maintain the security of their accounts.| Required (Bearer Token)|
+
+#### Data Object Definition
+
+| Data Field | Data Type | Description |
+|------------|-----------|-------------|
+| password   | string    | New password for the user.|
+
 - **Request:**
   ```json
   {
@@ -100,10 +118,16 @@ Manage user accounts using the following endpoints:
 
 #### 3.4. Delete User
 
-- **Endpoint:** `/users/{username}`
-- **Method:** DELETE
-- **Description:** Delete a user account.
-- **Authentication:** Required (Bearer Token)
+| End Point | Method | Description | Authentication |
+|-----------|--------|-------------|----------------|
+| /users/{username}  | DELETE   | Deletes a user account by their username. This function allows administrators to remove user accounts that are no longer needed or to handle account deletions requested by users, ensuring proper management of user data.| Required (Bearer Token)|
+
+#### Data Object Definition
+
+| Data Field | Data Type | Description |
+|------------|-----------|-------------|
+| username   | string    | Username of the user to be deleted.|
+
 - **Response:** HTTP Status Code 204 (No Content)
 
 ### 4. Culinary Courses
@@ -112,50 +136,64 @@ Manage culinary courses using the following endpoints:
 
 #### 4.1. List All Courses
 
-- **Endpoint:** `/courses`
-- **Method:** GET
-- **Description:** Retrieve a list of available culinary courses.
-- **Authentication:** Required (Bearer Token)
+| End Point | Method | Description | Authentication |
+|-----------|--------|-------------|----------------|
+| /courses  | GET   | Retrieves a list of all available culinary courses. This function provides users with an overview of the courses offered on the platform, including their names, descriptions, and prices, allowing them to browse and select courses of interest.| Required (Bearer Token)|
+
 - **Response:**
   ```json
   [
     {
       "id": "course_id",
-      "name": "Course Name",
-      "description": "Course Description",
-      "price": 19.99
+      "name": "Baking",
+      "description": "Includes Recipe Catogeries and Recipes of Baking",
+      "price": 26.99
     },
     // Additional course objects
   ]
 
 #### 4.2. Create Course
 
-- **Endpoint:** `/courses`
-- **Method:** POST
-- **Description:** Add a new culinary course.
-- **Authentication:** Required (Bearer Token)
+| End Point | Method | Description | Authentication |
+|-----------|--------|-------------|----------------|
+| /courses  | POST   | Adds a new culinary course with the specified name, description, and price. This function enables administrators to expand the catalog of available courses by creating new ones, providing users with more options to choose from.| Required (Bearer Token)|
+
+#### Data Object Definition
+
+| Data Field | Data Type | Description |
+|------------|-----------|-------------|
+| name       | string    | Name of the new course.|
+| description| string    | Description of the new course.|
+| price      | float     | Price of the new course.|
+
 - **Request:**
   ```json
   {
-    "name": "New Course",
-    "description": "Course Description",
+    "name": "Meals for One",
+    "description": "Includes Recipe Catogeries and Recipes that are specifically designed for one person",
     "price": 29.99
   }
 - **Response:**
   ```json
   {
     "id": "new_course_id",
-    "name": "New Course",
-    "description": "Course Description",
+    "name": "Meals for One",
+    "description": "Contains Recipe Catogeries and Recipes that are specifically designed for one person",
     "price": 29.99
   }
 
 #### 4.3. Get Course Details
 
-- **Endpoint:** `/courses/{courseId}`
-- **Method:** GET
-- **Description:** Retrieve the details of a specific culinary course.
-- **Authentication:** Required (Bearer Token)
+| End Point | Method | Description | Authentication |
+|-----------|--------|-------------|----------------|
+| /courses/{courseId}  | GET   | Retrieves details of a specific culinary course by its ID. This function allows users to view comprehensive information about a particular course, including its name, description, and price, helping them make informed decisions about enrollment.| Required (Bearer Token)|
+
+#### Data Object Definition
+
+| Data Field | Data Type | Description |
+|------------|-----------|-------------|
+| courseId   | string    | Unique identifier of the course.|
+
 - **Response:**
   ```json
   {
@@ -167,10 +205,19 @@ Manage culinary courses using the following endpoints:
   
 #### 4.4. Update Course
 
-- **Endpoint:** `/courses/{courseId}`
-- **Method:** PUT
-- **Description:** Update the details of a specific culinary course.
-- **Authentication:** Required (Bearer Token)
+| End Point | Method | Description | Authentication |
+|-----------|--------|-------------|----------------|
+| /courses/{courseId}  | PUT   | Updates the details of an existing culinary course, including its name, description, and price. This function enables administrators to modify course information as needed, such as updating course content, adjusting pricing, or refining course descriptions.| Required (Bearer Token)|
+
+#### Data Object Definition
+
+| Data Field | Data Type | Description |
+|------------|-----------|-------------|
+| courseId   | string    | Unique identifier of the course to update.|
+| name       | string    | New name of the course.|
+| description| string    | New description of the course.|
+| price      | float     | New price for the course.|
+
 - **Request:**
   ```json
   {
