@@ -1,6 +1,6 @@
 # Design Document: Menu Management System
------------------------------------------------------------------------------------------
 ## Introduction
+-----------------------------------------------------------
 This design document outlines the specifications and design considerations for the menu management system of a restaurant website. It provides detailed information on functional requirements, architectural design, database structure, rule engine configurations, and security measures.
 ## Assumptions
 --------------------------------------------------------------------------------------------
