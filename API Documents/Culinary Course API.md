@@ -15,9 +15,9 @@ To access most endpoints of this API, you need to authenticate using JWT (JSON W
 ---------------------------------------------------------------
 ### 1. Login
 
-| End Point | Method | Description | Authentication |
-|-----------|--------|-------------|----------------|
-| /login    | POST   | Creates a new user account with the provided username and password. This function allows new users to register for the culinary course platform, providing them access to various features and functionalities. | - |
+| End Point | Method | Description |
+|-----------|--------|-------------|
+| /login    | POST   | Creates a new user account with the provided username and password. This function allows new users to register for the culinary course platform, providing them access to various features and functionalities. |
 #### Data Object Definition
 
 | Data Field | Data Type | Description |
@@ -144,7 +144,7 @@ Manage culinary courses using the following endpoints:
   ```json
   [
     {
-      "id": "course_id",
+      "courseId": "course_id",
       "name": "Baking",
       "description": "Includes Recipe Catogeries and Recipes of Baking",
       "price": 26.99
@@ -176,7 +176,7 @@ Manage culinary courses using the following endpoints:
 - **Response:**
   ```json
   {
-    "id": "new_course_id",
+    "courseId": "new_course_id",
     "name": "Meals for One",
     "description": "Contains Recipe Catogeries and Recipes that are specifically designed for one person",
     "price": 29.99
@@ -197,10 +197,10 @@ Manage culinary courses using the following endpoints:
 - **Response:**
   ```json
   {
-    "id": "course_id",
-    "name": "Course Name",
-    "description": "Course Description",
-    "price": 19.99
+    "courseId": "course_id",
+    "name": "Baking",
+    "description": "Includes Recipe Catogeries and Recipes of Baking",
+    "price": 26.99
   }
   
 #### 4.4. Update Course
@@ -221,25 +221,31 @@ Manage culinary courses using the following endpoints:
 - **Request:**
   ```json
   {
-    "name": "Updated Course Name",
-    "description": "Updated Course Description",
+    "name": "Family Meals",
+    "description": "Include Recipe Categories and Recipes required for a Family",
     "price": 24.99
   }
 - **Response:**
   ```json
   {
-    "id": "course_id",
-    "name": "Updated Course Name",
-    "description": "Updated Course Description",
+    "CategoryId": "course_id",
+    "name": "Grilling",
+    "description": "Includes Recipe Categories and Recipes of Grilling",
     "price": 24.99
   }
 
 #### 4.5. Delete Course
 
-- **Endpoint:** `/courses/{courseId}`
-- **Method:** DELETE
-- **Description:** Delete a specific culinary course.
-- **Authentication:** Required (Bearer Token)
+| End Point | Method | Description | Authentication |
+|-----------|--------|-------------|----------------|
+| /courses/{courseId}  | DELETE   | Deletes a culinary course by its ID. This function allows administrators to remove courses that are no longer offered or relevant, ensuring that the course catalog remains up-to-date and streamlined.| Required (Bearer Token)|
+
+#### Data Object Definition
+
+| Data Field | Data Type | Description |
+|------------|-----------|-------------|
+| courseId   | string    | Unique identifier of the course.|
+
 - **Response:** HTTP Status Code 204 (No Content)
 
 ### 5. Recipe Categories
@@ -248,44 +254,64 @@ Manage recipe categories within culinary courses using the following endpoints:
 
 #### 5.1. List Categories in a Course
 
-- **Endpoint:** `/courses/{courseId}/categories`
-- **Method:** GET
-- **Description:** Retrieve a list of categories within a specific culinary course.
-- **Authentication: Required (Bearer Token)
+| End Point | Method | Description | Authentication |
+|-----------|--------|-------------|----------------|
+| /courses/{courseId}/categories  | GET   | Retrieves a list of categories within a specific culinary course. This function provides users with an overview of the different recipe categories available within a course, allowing them to explore recipes based on their interests or preferences.| Required (Bearer Token)|
+
+#### Data Object Definition
+
+| Data Field | Data Type | Description |
+|------------|-----------|-------------|
+| categoryId   | string    | Unique identifier of the category.|
+
 - **Response:**
   ```json
   [
     {
-      "id": "category_id",
-      "name": "Category Name"
+      "categoryId": "category_id",
+      "name": "Baking"
     },
     // Additional category objects
   ]
 
 #### 5.2. Create Category
 
-- **Endpoint:** `/courses/{courseId}/categories`
-- **Method:** POST
-- **Description:** Add a new category to a specific culinary course.
-- **Authentication:** Required (Bearer Token)
+| End Point | Method | Description | Authentication |
+|-----------|--------|-------------|----------------|
+| /courses/{courseId}/categories  | POST   | Adds a new category to a specific culinary course. This function enables administrators to organize recipes into distinct categories, facilitating easier navigation and exploration for users looking for specific types of recipes.| Required (Bearer Token)|
+
+#### Data Object Definition
+
+| Data Field | Data Type | Description |
+|------------|-----------|-------------|
+| categoryId   | string    | Unique identifier of the category.|
+| name       | string    | Name of the new category.|
+
 - **Request:**
   ```json
   {
-    "name": "New Category"
+    "name": "Soups"
   }
 - **Response:**
   ```json
   {
-    "id": "new_category_id",
-    "name": "New Category"
+    "categoryId": "new_category_id",
+    "name": "Soups"
   }
 
 #### 5.3. Delete Category
 
-- **Endpoint:** `/courses/{courseId}/categories/{categoryId}`
-- **Method:** DELETE
-- **Description:** Delete a specific category from a culinary course.
-- **Authentication:** Required (Bearer Token)
+| End Point | Method | Description | Authentication |
+|-----------|--------|-------------|----------------|
+| /courses/{courseId}/categories/{categoryId}  | DELETE   | Deletes a category from a culinary course. This function allows administrators to remove categories that are no longer needed or relevant, helping maintain a well-organized and efficient categorization system for recipes.| Required (Bearer Token)|
+
+#### Data Object Definition
+
+| Data Field | Data Type | Description |
+|------------|-----------|-------------|
+| courseId   | string    | Unique identifier of the course.|
+| categoryId | string    | Unique identifier of the category.|
+
 - **Response:** HTTP Status Code 204 (No Content)
 
 ### 6. Recipes
@@ -294,75 +320,147 @@ Manage recipes within recipe categories using the following endpoints:
 
 #### 6.1. List Recipes in a Category
 
-- **Endpoint:** `/courses/{courseId}/categories/{categoryId}/recipes`
-- **Method:** GET
-- **Description:** Retrieve a list of recipes within a specific category of a culinary course.
-- **Authentication:** Required (Bearer Token)
+| End Point | Method | Description | Authentication |
+|-----------|--------|-------------|----------------|
+| /courses/{courseId}/categories/{categoryId}/recipes  | GET   | Retrieves a list of recipes within a specific category of a culinary course. This function provides users with access to a curated list of recipes belonging to a particular category, enabling them to discover and explore recipes tailored to their preferences.| Required (Bearer Token)|
+
+#### Data Object Definition
+
+| Data Field | Data Type | Description |
+|------------|-----------|-------------|
+| courseId   | string    | Unique identifier of the course.|
+| categoryId | string    | Unique identifier for the recipe category.|
+
 - **Response:**
   ```json
   [
     {
-      "id": "recipe_id",
-      "title": "Recipe Title",
-      "ingredients": ["Ingredient 1", "Ingredient 2"],
-      "instructions": "Recipe Instructions",
-      "image_url": "Recipe Image URL"
-    },
+     "recipeId": "recipe_id",
+     "title": "Tomato Basil Soup",
+     "ingredients": ["1 can (28 oz) whole peeled tomatoes", "1 small onion, chopped", "2 cloves garlic, minced", "2 cups 
+       vegetable or chicken broth", "1/4 cup fresh basil leaves, chopped", "2 tablespoons olive oil", "Salt and pepper to 
+       taste", "Optional: 1/4 cup heavy cream or coconut milk"],
+     "instructions": "1. Heat olive oil in a large pot over medium heat. 2. Add chopped onion and minced garlic, sauté 
+       until soft. 3. Add tomatoes (with juices) and broth, bring to a simmer. 4. Simmer for 15-20 minutes. 5. Blend until 
+       smooth. 6. Stir in chopped basil. 7. Season with salt and pepper. 8. Stir in heavy cream or coconut milk if desired. 
+       9. Warm through and serve hot.",
+     "image_url": "https://example.com/tomato_basil_soup_image.jpg"
+   },
     // Additional recipe objects
   ]
 
 #### 6.2. Create Recipe
 
-- **Endpoint:** `/courses/{courseId}/categories/{categoryId}/recipes`
-- **Method:** POST
-- **Description:** Add a new recipe to a specific category of a culinary course.
-- **Authentication:** Required (Bearer Token)
+| End Point | Method | Description | Authentication |
+|-----------|--------|-------------|----------------|
+| /courses/{courseId}/categories/{categoryId}/recipes  | POST   | Adds a new recipe to a specific category of a culinary course. This function allows administrators to expand the recipe database by adding new recipes, providing users with a diverse selection of culinary creations to explore and try out.| Required (Bearer Token)|
+
+#### Data Object Definition
+
+| Data Field | Data Type | Description |
+|------------|-----------|-------------|
+| courseId   | string    | Unique identifier of the course.|
+| categoryId | string    | Unique identifier for the recipe category.|
+| title      | string    | Title of the new recipe.|
+| ingredients| array     | Ingredients required for the new recipe.|
+| instructions| string   | Instructions to prepare the new recipe.|
+| image_url  | string    | URL of the image associated with the new recipe.|
+
 - **Request:**
   ```json
   {
-    "title": "New Recipe Title",
-    "ingredients": ["Ingredient 1", "Ingredient 2"],
-    "instructions": "Recipe Instructions",
-    "image_url": "Recipe Image URL"
+    "title": "Egg Bites",
+    "ingredients":  ["4 large eggs", "1/2 cup milk", "1/2 cup shredded cheese (such as cheddar or mozzarella)", "1/4 cup 
+      diced ham or cooked bacon", "Salt and pepper to taste", "Cooking spray or butter for greasing muffin tin"],
+    "instructions": "1. Preheat your oven to 350°F (175°C) and grease a muffin tin with cooking spray or butter. 2. In a 
+      mixing bowl, whisk together eggs and milk until well combined. 3. Stir in shredded cheese, diced ham or cooked bacon, 
+      salt, and pepper. 4. Pour the egg mixture into the prepared muffin tin, filling each cup about 3/4 full. 5. Bake in 
+      the preheated oven for 20-25 minutes, or until the egg bites are set and slightly golden on top. 6. Remove from the 
+      oven and let cool for a few minutes before serving. 7. Serve warm and enjoy!",
+    "image_url": "https://example.com/egg_bites_image.jpg"
   }
 - **Response:**
   ```json
   {
-    "id": "new_recipe_id",
-    "title": "New Recipe Title",
-    "ingredients": ["Ingredient 1", "Ingredient 2"],
-    "instructions": "Recipe Instructions",
-    "image_url": "Recipe Image URL"
+    "recipeId": "new_recipe_id",
+     "title": "Egg Bites",
+    "ingredients":  ["4 large eggs", "1/2 cup milk", "1/2 cup shredded cheese (such as cheddar or mozzarella)", "1/4 cup 
+      diced ham or cooked bacon", "Salt and pepper to taste", "Cooking spray or butter for greasing muffin tin"],
+    "instructions": "1. Preheat your oven to 350°F (175°C) and grease a muffin tin with cooking spray or butter. 2. In a 
+      mixing bowl, whisk together eggs and milk until well combined. 3. Stir in shredded cheese, diced ham or cooked bacon, 
+      salt, and pepper. 4. Pour the egg mixture into the prepared muffin tin, filling each cup about 3/4 full. 5. Bake in 
+      the preheated oven for 20-25 minutes, or until the egg bites are set and slightly golden on top. 6. Remove from the 
+      oven and let cool for a few minutes before serving. 7. Serve warm and enjoy!",
+    "image_url": "https://example.com/egg_bites_image.jpg"
   }
 
 #### 6.3. Update Recipe
 
-- **Endpoint:** `/courses/{courseId}/categories/{categoryId}/recipes/{recipeId}`
-- **Method:** PUT
-- **Description:** Update the details of a specific recipe within a category of a culinary course.
-- **Authentication:** Required (Bearer Token)
+| End Point | Method | Description | Authentication |
+|-----------|--------|-------------|----------------|
+| /courses/{courseId}/categories/{categoryId}/recipes/{recipeId}  | PUT   | Updates the details of an existing recipe within a category of a culinary course. This function enables administrators to modify recipe information, such as updating recipe titles, ingredients, instructions, or associated images, ensuring accurate and up-to-date recipe content.| Required (Bearer Token)|
+
+#### Data Object Definition
+
+| Data Field | Data Type | Description |
+|------------|-----------|-------------|
+| courseId   | string    | Unique identifier of the course.|
+| categoryId | string    | Unique identifier for the recipe category.|
+| recipeId   | string    | Unique identifier for the recipe to update.|
+| title      | string    | New title for the recipe.|
+| ingredients| array     | New ingredients for the recipe.|
+| instructions| string   | New instructions for the recipe.|
+| image_url  | string    | New URL of the image associated with the recipe.|
+
 - **Request:**
   ```json
   {
-    "title": "Updated Recipe Title",
-    "ingredients": ["Updated Ingredient 1", "Updated Ingredient 2"],
-    "instructions": "Updated Recipe Instructions",
-    "image_url": "Updated Recipe Image URL"
+    "title": "Egg Bites",
+    "ingredients":  ["4 large eggs", "1/2 cup milk", "1/2 cup shredded cheese (such as cheddar or mozzarella)", "1/4 cup 
+      diced ham or cooked bacon", "Salt and pepper to taste", "Cooking spray or butter for greasing muffin tin"],
+    "instructions": "1. Preheat your oven to 350°F (175°C) and grease a muffin tin with cooking spray or butter. 2. In a 
+      mixing bowl, whisk together eggs and milk until well combined. 3. Stir in shredded cheese, diced ham or cooked bacon, 
+      salt, and pepper. 4. Pour the egg mixture into the prepared muffin tin, filling each cup about 3/4 full. 5. Bake in 
+      the preheated oven for 20-25 minutes, or until the egg bites are set and slightly golden on top. 6. Remove from the 
+      oven and let cool for a few minutes before serving. 7. Serve warm and enjoy!",
+    "image_url": "https://example.com/egg_bites_image.jpg"
   }
 - **Response:**
   ```json
   {
-    "id": "recipe_id",
-    "title": "Updated Recipe Title",
-    "ingredients": ["Updated Ingredient 1", "Updated Ingredient 2"],
-    "instructions": "Updated Recipe Instructions",
-    "image_url": "Updated Recipe Image URL"
+    "recipeId": "recipe_id",
+    "title": "Omelette",
+    "ingredients": [
+      "2 large eggs",
+      "1/4 cup milk",
+      "1/4 cup shredded cheese (such as cheddar or Swiss)",
+      "1/4 cup diced vegetables (such as bell peppers, onions, and tomatoes)",
+      "Salt and pepper to taste",
+      "1 tablespoon butter or oil for cooking"
+    ],
+    "instructions": "1. In a mixing bowl, beat the eggs and milk until well combined. Season with salt and pepper. 2. Heat 
+     the butter or oil in a non-stick skillet over medium heat. 3. Pour the egg mixture into the skillet. 4. As the eggs 
+     start to set around the edges, use a spatula to gently lift them, allowing the uncooked eggs to flow underneath. 5. 
+     When the omelette is mostly set but still slightly runny on top, sprinkle the shredded cheese and diced vegetables 
+     over one half of the omelette. 6. Carefully fold the other half of the omelette over the filling. 7. Cook for another 
+     minute or until the cheese is melted and the omelette is cooked through. 8. Slide the omelette onto a plate and serve 
+    immediately.",
+  "image_url": "https://example.com/omelette_image.jpg"
   }
 
 #### 6.4. Delete Recipe
 
-- **Endpoint:** `/courses/{courseId}/categories/{categoryId}/recipes/{recipeId}`
-- **Method:** DELETE
-- **Description:** Delete a specific recipe from a category of a culinary course.
-- **Authentication:** Required (Bearer Token)
+| End Point | Method | Description | Authentication |
+|-----------|--------|-------------|----------------|
+| /courses/{courseId}/categories/{categoryId}/recipes/{recipeId}  | DELETE   | Deletes a recipe from a category of a culinary course. This function allows administrators to remove recipes that are no longer needed or relevant, ensuring that the recipe database remains well-curated and free from outdated or redundant entries.| Required (Bearer Token)|
+
+#### Data Object Definition
+
+| Data Field | Data Type | Description |
+|------------|-----------|-------------|
+| courseId   | string    | Unique identifier of the course.|
+| categoryId | string    | Unique identifier for the recipe category.|
+| recipeId   | string    | Unique identifier for the recipe to update.|
+
 - **Response:** HTTP Status Code 204 (No Content)
+## Conclusion
