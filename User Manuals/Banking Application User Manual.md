@@ -1,4 +1,6 @@
 # Banking Application User Manual
+# Table of Contents
+[1. Introduction](https://github.com/vyshnavigu/Technical-Writer-Portfolio---Vyshnavi-Gurram/edit/main/User%20Manuals/Banking%20Application%20User%20Manual.md#1introduction)
 ## 1.	Introduction
 ------------------------------------------------------------
 The Banking Application is a user-friendly platform that allows customers to conveniently access and manage their bank accounts. This user manual provides a comprehensive guide on how to navigate the application's features and functionality effectively.
