@@ -23,3 +23,6 @@ My current professional toolkit includes:
 - GitHub
 - Markdown
 - XML
+## License
+-----------------------------------------------------------------------------------------------
+This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License - see the [LICENSE](LICENSE.md) file for details.
