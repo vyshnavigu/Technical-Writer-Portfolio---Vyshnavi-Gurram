@@ -1,4 +1,16 @@
 # Culinary Course API Documentation
+## Table of Contents
+- [Introduction](#introduction)
+- [Base URL](#base-url)
+- [Authentication](#authentication)
+- [#API Functions](#api-functions)
+- [End Points](#end-points)
+ - [Login](#login)
+ - [User Management](#user-management)
+ - [Culinary Courser](#culinary-courses)
+ - [Recipe Categories](#recipe-categories)
+ - [Recipes)(#recipes)
+- [Conclusion](#conclusion)
 ## Introduction
 -------------------------------------
 Welcome to the Culinary Course API documentation. This API allows you to manage culinary courses, categories, and recipes. Users can interact with the API by creating an account, logging in, and performing various actions.
@@ -37,6 +49,8 @@ Ref   | Function                 | Description                                  
 
 ## Endpoints
 ---------------------------------------------------------------
+### 1. Login
+-------------------------------------------------------------
 #### 1.1. Login
 
 | End Point | Method | Description |
