@@ -10,16 +10,16 @@ My current role is a Technical Writer with experience in the Product & Delivery 
 ## My Tool Kit
 ---------------------------------------------------------------------------------------------
 My current professional toolkit includes:
--Jira
--Confluence
--Office 365
--SharePoint
--ClickHelp
+- Jira
+- Confluence
+- Office 365
+- SharePoint
+- ClickHelp
 ## Other Tools I've Used
 ------------------------------------------------------------------------------------------------
--Microsoft Visio
--Google Docs
--Swagger
--GitHub
--Markdown
--XML
+- Microsoft Visio
+- Google Docs
+- Swagger
+- GitHub
+- Markdown
+- XML
