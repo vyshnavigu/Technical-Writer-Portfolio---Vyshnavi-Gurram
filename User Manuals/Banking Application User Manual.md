@@ -1,15 +1,15 @@
 # Banking Application User Manual
 # Table of Contents
 [1. Introduction](#Introduction)
-[2. Getting Started](#Getting Started)
-[3. Login and Authentication](#Login and Authentication)
+[2. Getting Started](#Getting-Started)
+[3. Login and Authentication](#Login-and-Authentication)
 [4. Dashboard](#Dashboard)
-[5. Funds Transfer](#Funds Transfer)
-[6. Bill Payments](#Bill Payments)
-[7. Depostits and Withdrawals](#Depostits and Withdrawals)
-[8. Account Management](#Account Management)
-[9. Support and Contact Information](#Support and Contact Information)
-10. Frequently Asked Questions (FAQs)](#Frequently Asked Questions (FAQs))
+[5. Funds Transfer](#Funds-Transfer)
+[6. Bill Payments](#Bill-Payments)
+[7. Depostits and Withdrawals](#Depostits-and-Withdrawals)
+[8. Account Management](#Account-Management)
+[9. Support and Contact Information](#Support-and-Contact-Information)
+10. Frequently Asked Questions (FAQs)](#Frequently-Asked-Questions-(FAQs))
 
 ## 1.	Introduction
 ------------------------------------------------------------
