@@ -15,14 +15,15 @@ To access most endpoints of this API, you need to authenticate using JWT (JSON W
 ---------------------------------------------------------------
 ### 1. Login
 
-| End Point | Method | Description |
-|-----------|--------|-------------|
-| /login    | POST   | Creates a new user account with the provided username and password. This function allows new users to register for the culinary course platform, providing them access to various features and functionalities. |
+| End Point | Method | Description | Authentication |
+|-----------|--------|-------------|----------------|
+| /login    | POST   | Creates a new user account with the provided username and password. This function allows new users to register for the culinary course platform, providing them access to various features and functionalities. | - |
 #### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
 | username   | string    | Username of the new user.|
+| password   | string    | Password of the new user.|
 
 - **Request:**
   ```json
