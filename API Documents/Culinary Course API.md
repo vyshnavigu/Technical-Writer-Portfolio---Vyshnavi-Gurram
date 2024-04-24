@@ -1,61 +1,68 @@
 # Culinary Course API Documentation
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Base URL](#base-url)
 - [Authentication](#authentication)
 - [API Functions](#api-functions)
-- [End Points](#endpoints)
-   - [Login](#login)
-   - [User Management](#user-management)
-   - [Culinary Courses](#culinary-courses)
-   - [Recipe Categories](#recipe-categories)
-   - [Recipes](#recipes)
+- [Endpoints](#endpoints)
+    1. [Login](#login)
+    2. [User Management](#user-management)
+    3. [Culinary Courses](#culinary-courses)
+    4. [Recipe Categories](#recipe-categories)
+    5. [Recipes](#recipes)
 - [Conclusion](#conclusion)
+
 ## Introduction
 -------------------------------------
-Welcome to the Culinary Course API documentation. This API allows you to manage culinary courses, categories, and recipes. Users can interact with the API by creating an account, logging in, and performing various actions.
-This is an on-demand culinary course that offers customers the flexibility to pay as per their convenience.
+Welcome to the Culinary Course API documentation. This API allows you to manage culinary courses, categories, and recipes. Users can interact with the API by creating an account, logging in, and performing various actions. This is an on-demand culinary course that offers customers the flexibility to pay as per their convenience.
 
 Contact email {vyshnavig28@gmail.com}
+
 ## Base URL
 ----------------------------------------------
-https://app.swaggerhub.com/apis-docs/VYSHNAVIGU_1/CulinaryCourseAPI/9.9.9 
+[https://app.swaggerhub.com/apis-docs/VYSHNAVIGU_1/CulinaryCourseAPI/9.9.9](https://app.swaggerhub.com/apis-docs/VYSHNAVIGU_1/CulinaryCourseAPI/9.9.9)
+
 ## Authentication
 ------------------------------------------------------
 To access most endpoints of this API, you need to authenticate using JWT (JSON Web Tokens). You can obtain a token by logging in with your credentials.
+
 ## API Functions
 -----------------------------------------------------
 
-Ref   | Function                 | Description                                  | API End Point                                              | Request Type
-------|--------------------------|----------------------------------------------|-----------------------------------------------------------|-------------
-1.1   | Login                    | Authenticate and obtain an access token.    | /login                                                     | POST 
-1.2   | Logout                   | Log out the currently authenticated user.  | /logout                                                    | POST 
-2.1   | Create User              | Create a new user account.                  | /users                                                     | POST 
-2.2   | Get User by Username    | Retrieve user details by username.         | /users/{username}                                         | GET 
-2.3   | Update User              | Update user details.                        | /users/{username}                                         | PUT 
-2.4   | Delete User              | Delete a user account.                      | /users/{username}                                         | DELETE 
-3.1   | List All Courses         | Retrieve a list of available culinary courses. | /courses                                             | GET 
-3.2   | Create Course            | Add a new culinary course.                 | /courses                                                   | POST 
-3.3   | Get Course Details      | Retrieve the details of a specific culinary course. | /courses/{courseId}                                   | GET 
-3.4   | Update Course            | Update the details of a specific culinary course. | /courses/{courseId}                                   | PUT 
-3.5   | Delete Course            | Delete a specific culinary course.         | /courses/{courseId}                                       | DELETE 
-4.1   | List Categories in a Course | Retrieve a list of categories within a specific culinary course. | /courses/{courseId}/categories                     | GET 
-4.2   | Create Category          | Add a new category to a specific culinary course. | /courses/{courseId}/categories                             | POST 
-4.3   | Delete Category          | Delete a specific category from a culinary course. | /courses/{courseId}/categories/{categoryId}           | DELETE 
-5.1   | List Recipes in a Category | Retrieve a list of recipes within a specific category of a culinary course. | /courses/{courseId}/categories/{categoryId}/recipes | GET 
-5.2   | Create Recipe            | Add a new recipe to a specific category of a culinary course. | /courses/{courseId}/categories/{categoryId}/recipes     | POST 
-5.3   | Update Recipe            | Update the details of a specific recipe within a category of a culinary course. | /courses/{courseId}/categories/{categoryId}/recipes/{recipeId} | PUT 
-5.4   | Delete Recipe            | Delete a specific recipe from a category of a culinary course. | /courses/{courseId}/categories/{categoryId}/recipes/{recipeId} | DELETE 
+| Ref   | Function                 | Description                                  | API End Point                                              | Request Type |
+|-------|--------------------------|----------------------------------------------|-----------------------------------------------------------|--------------|
+| 1.1   | Login                    | Authenticate and obtain an access token.    | /login                                                     | POST         |
+| 1.2   | Logout                   | Log out the currently authenticated user.  | /logout                                                    | POST         |
+| 2.1   | Create User              | Create a new user account.                  | /users                                                     | POST         |
+| 2.2   | Get User by Username     | Retrieve user details by username.          | /users/{username}                                         | GET          |
+| 2.3   | Update User              | Update user details.                        | /users/{username}                                         | PUT          |
+| 2.4   | Delete User              | Delete a user account.                      | /users/{username}                                         | DELETE       |
+| 3.1   | List All Courses         | Retrieve a list of available culinary courses. | /courses                                             | GET          |
+| 3.2   | Create Course            | Add a new culinary course.                 | /courses                                                   | POST         |
+| 3.3   | Get Course Details       | Retrieve the details of a specific culinary course. | /courses/{courseId}                                   | GET          |
+| 3.4   | Update Course            | Update the details of a specific culinary course. | /courses/{courseId}                                   | PUT          |
+| 3.5   | Delete Course            | Delete a specific culinary course.         | /courses/{courseId}                                       | DELETE       |
+| 4.1   | List Categories in a Course | Retrieve a list of categories within a specific culinary course. | /courses/{courseId}/categories                     | GET          |
+| 4.2   | Create Category          | Add a new category to a specific culinary course. | /courses/{courseId}/categories                             | POST         |
+| 4.3   | Delete Category          | Delete a specific category from a culinary course. | /courses/{courseId}/categories/{categoryId}           | DELETE       |
+| 5.1   | List Recipes in a Category | Retrieve a list of recipes within a specific category of a culinary course. | /courses/{courseId}/categories/{categoryId}/recipes | GET          |
+| 5.2   | Create Recipe            | Add a new recipe to a specific category of a culinary course. | /courses/{courseId}/categories/{categoryId}/recipes     | POST         |
+| 5.3   | Update Recipe            | Update the details of a specific recipe within a category of a culinary course. | /courses/{courseId}/categories/{categoryId}/recipes/{recipeId} | PUT          |
+| 5.4   | Delete Recipe            | Delete a specific recipe from a category of a culinary course. | /courses/{courseId}/categories/{categoryId}/recipes/{recipeId} | DELETE       |
 
 ## Endpoints
 ---------------------------------------------------------------
+
 ### 1. Login
 -------------------------------------------------------------
+
 #### 1.1. Login
 
 | End Point | Method | Description |
 |-----------|--------|-------------|
 | /login    | POST   | Creates a new user account with the provided username and password. This function allows new users to register for the culinary course platform, providing them access to various features and functionalities. |
+
 ##### Data Object Definition
 
 | Data Field | Data Type | Description |
@@ -83,6 +90,7 @@ Ref   | Function                 | Description                                  
 
 ### 2. User Management
 ----------------------------------------------------
+
 Manage user accounts using the following endpoints:
 
 #### 2.1. Create User
@@ -170,6 +178,7 @@ Manage user accounts using the following endpoints:
 
 ### 3. Culinary Courses
 --------------------------------------------------------------------
+
 Manage culinary courses using the following endpoints:
 
 #### 3.1. List All Courses
@@ -288,6 +297,7 @@ Manage culinary courses using the following endpoints:
 
 ### 4. Recipe Categories
 ----------------------------------------------------------------
+
 Manage recipe categories within culinary courses using the following endpoints:
 
 #### 4.1. List Categories in a Course
@@ -354,6 +364,7 @@ Manage recipe categories within culinary courses using the following endpoints:
 
 ### 5. Recipes
 ---------------------------------------------------------
+
 Manage recipes within recipe categories using the following endpoints:
 
 #### 5.1. List Recipes in a Category
@@ -381,9 +392,9 @@ Manage recipes within recipe categories using the following endpoints:
      "instructions": "1. Heat olive oil in a large pot over medium heat. 2. Add chopped onion and minced garlic, sauté 
        until soft. 3. Add tomatoes (with juices) and broth, bring to a simmer. 4. Simmer for 15-20 minutes. 5. Blend until 
        smooth. 6. Stir in chopped basil. 7. Season with salt and pepper. 8. Stir in heavy cream or coconut milk if desired. 
-       9. Warm through and serve hot.",
-     "image_url": "https://example.com/tomato_basil_soup_image.jpg"
-   },
+       9. Serve hot and enjoy!",
+     "imageURL": "https://example.com/tomato-basil-soup.jpg"
+    },
     // Additional recipe objects
   ]
 
@@ -391,114 +402,104 @@ Manage recipes within recipe categories using the following endpoints:
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
-| /courses/{courseId}/categories/{categoryId}/recipes  | POST   | Adds a new recipe to a specific category of a culinary course. This function allows administrators to expand the recipe database by adding new recipes, providing users with a diverse selection of culinary creations to explore and try out.| Required (Bearer Token)|
+| /courses/{courseId}/categories/{categoryId}/recipes  | POST   | Adds a new recipe to a specific category of a culinary course. This function enables administrators to expand the repertoire of available recipes within a category, providing users with a wider selection of culinary options to explore and try out.| Required (Bearer Token)|
 
 ##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
-| courseId   | string    | Unique identifier of the course.|
-| categoryId | string    | Unique identifier for the recipe category.|
 | title      | string    | Title of the new recipe.|
-| ingredients| array     | Ingredients required for the new recipe.|
-| instructions| string   | Instructions to prepare the new recipe.|
-| image_url  | string    | URL of the image associated with the new recipe.|
+| ingredients| array     | List of ingredients required for the recipe.|
+| instructions| string   | Step-by-step instructions for preparing the recipe.|
+| imageURL   | string    | URL of an image representing the finished dish (optional).|
 
 - **Request:**
   ```json
   {
-    "title": "Egg Bites",
-    "ingredients":  ["4 large eggs", "1/2 cup milk", "1/2 cup shredded cheese (such as cheddar or mozzarella)", "1/4 cup 
-      diced ham or cooked bacon", "Salt and pepper to taste", "Cooking spray or butter for greasing muffin tin"],
-    "instructions": "1. Preheat your oven to 350°F (175°C) and grease a muffin tin with cooking spray or butter. 2. In a 
-      mixing bowl, whisk together eggs and milk until well combined. 3. Stir in shredded cheese, diced ham or cooked bacon, 
-      salt, and pepper. 4. Pour the egg mixture into the prepared muffin tin, filling each cup about 3/4 full. 5. Bake in 
-      the preheated oven for 20-25 minutes, or until the egg bites are set and slightly golden on top. 6. Remove from the 
-      oven and let cool for a few minutes before serving. 7. Serve warm and enjoy!",
-    "image_url": "https://example.com/egg_bites_image.jpg"
+    "title": "Pasta Primavera",
+    "ingredients": ["8 oz pasta (linguine or fettuccine work well)", "2 tablespoons olive oil", "3 cloves garlic, minced", 
+    "1 cup cherry tomatoes, halved", "1 cup broccoli florets", "1 cup bell peppers, sliced", "1/2 cup peas", "1/4 cup 
+    grated Parmesan cheese", "Salt and pepper to taste"],
+    "instructions": "1. Cook pasta according to package instructions. 2. In a large skillet, heat olive oil over medium 
+    heat. 3. Add minced garlic and sauté until fragrant. 4. Add cherry tomatoes, broccoli, bell peppers, and peas. 5. 
+    Sauté until vegetables are tender. 6. Add cooked pasta to the skillet and toss to combine. 7. Season with salt and 
+    pepper. 8. Serve hot with grated Parmesan cheese on top. 9. Enjoy!",
+    "imageURL": "https://example.com/pasta-primavera.jpg"
   }
 - **Response:**
   ```json
   {
     "recipeId": "new_recipe_id",
-     "title": "Egg Bites",
-    "ingredients":  ["4 large eggs", "1/2 cup milk", "1/2 cup shredded cheese (such as cheddar or mozzarella)", "1/4 cup 
-      diced ham or cooked bacon", "Salt and pepper to taste", "Cooking spray or butter for greasing muffin tin"],
-    "instructions": "1. Preheat your oven to 350°F (175°C) and grease a muffin tin with cooking spray or butter. 2. In a 
-      mixing bowl, whisk together eggs and milk until well combined. 3. Stir in shredded cheese, diced ham or cooked bacon, 
-      salt, and pepper. 4. Pour the egg mixture into the prepared muffin tin, filling each cup about 3/4 full. 5. Bake in 
-      the preheated oven for 20-25 minutes, or until the egg bites are set and slightly golden on top. 6. Remove from the 
-      oven and let cool for a few minutes before serving. 7. Serve warm and enjoy!",
-    "image_url": "https://example.com/egg_bites_image.jpg"
+    "title": "Pasta Primavera",
+    "ingredients": ["8 oz pasta (linguine or fettuccine work well)", "2 tablespoons olive oil", "3 cloves garlic, minced", 
+    "1 cup cherry tomatoes, halved", "1 cup broccoli florets", "1 cup bell peppers, sliced", "1/2 cup peas", "1/4 cup 
+    grated Parmesan cheese", "Salt and pepper to taste"],
+    "instructions": "1. Cook pasta according to package instructions. 2. In a large skillet, heat olive oil over medium 
+    heat. 3. Add minced garlic and sauté until fragrant. 4. Add cherry tomatoes, broccoli, bell peppers, and peas. 5. 
+    Sauté until vegetables are tender. 6. Add cooked pasta to the skillet and toss to combine. 7. Season with salt and 
+    pepper. 8. Serve hot with grated Parmesan cheese on top. 9. Enjoy!",
+    "imageURL": "https://example.com/pasta-primavera.jpg"
   }
 
 #### 5.3. Update Recipe
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
-| /courses/{courseId}/categories/{categoryId}/recipes/{recipeId}  | PUT   | Updates the details of an existing recipe within a category of a culinary course. This function enables administrators to modify recipe information, such as updating recipe titles, ingredients, instructions, or associated images, ensuring accurate and up-to-date recipe content.| Required (Bearer Token)|
+| /courses/{courseId}/categories/{categoryId}/recipes/{recipeId}  | PUT   | Updates the details of a specific recipe within a category of a culinary course. This function enables administrators to modify recipe information as needed, such as correcting errors, updating ingredient lists, or revising cooking instructions.| Required (Bearer Token)|
 
 ##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
-| courseId   | string    | Unique identifier of the course.|
-| categoryId | string    | Unique identifier for the recipe category.|
-| recipeId   | string    | Unique identifier for the recipe to update.|
-| title      | string    | New title for the recipe.|
-| ingredients| array     | New ingredients for the recipe.|
-| instructions| string   | New instructions for the recipe.|
-| image_url  | string    | New URL of the image associated with the recipe.|
+| recipeId   | string    | Unique identifier of the recipe to update.|
+| title      | string    | New title of the recipe.|
+| ingredients| array     | New list of ingredients for the recipe.|
+| instructions| string   | New step-by-step instructions for preparing the recipe.|
+| imageURL   | string    | New URL of an image representing the finished dish (optional).|
 
 - **Request:**
   ```json
   {
-    "title": "Egg Bites",
-    "ingredients":  ["4 large eggs", "1/2 cup milk", "1/2 cup shredded cheese (such as cheddar or mozzarella)", "1/4 cup 
-      diced ham or cooked bacon", "Salt and pepper to taste", "Cooking spray or butter for greasing muffin tin"],
-    "instructions": "1. Preheat your oven to 350°F (175°C) and grease a muffin tin with cooking spray or butter. 2. In a 
-      mixing bowl, whisk together eggs and milk until well combined. 3. Stir in shredded cheese, diced ham or cooked bacon, 
-      salt, and pepper. 4. Pour the egg mixture into the prepared muffin tin, filling each cup about 3/4 full. 5. Bake in 
-      the preheated oven for 20-25 minutes, or until the egg bites are set and slightly golden on top. 6. Remove from the 
-      oven and let cool for a few minutes before serving. 7. Serve warm and enjoy!",
-    "image_url": "https://example.com/egg_bites_image.jpg"
+    "title": "Chicken Alfredo Pasta",
+    "ingredients": ["8 oz pasta (fettuccine or spaghetti)", "2 boneless, skinless chicken breasts, thinly sliced", "2 
+    tablespoons olive oil", "3 cloves garlic, minced", "1 cup heavy cream", "1/2 cup grated Parmesan cheese", "Salt and 
+    pepper to taste", "Chopped parsley for garnish (optional)"],
+    "instructions": "1. Cook pasta according to package instructions. 2. In a large skillet, heat olive oil over medium-
+    high heat. 3. Add minced garlic and sauté until fragrant. 4. Add sliced chicken breasts and cook until no longer pink. 
+    5. Reduce heat to medium-low. 6. Add heavy cream and grated Parmesan cheese. 7. Simmer until sauce thickens. 8. 
+    Season with salt and pepper. 9. Add cooked pasta to the skillet and toss to coat in sauce. 10. Serve hot with chopped 
+    parsley on top. 11. Enjoy!",
+    "imageURL": "https://example.com/chicken-alfredo-pasta.jpg"
   }
 - **Response:**
   ```json
   {
-    "recipeId": "recipe_id",
-    "title": "Omelette",
-    "ingredients": [
-      "2 large eggs",
-      "1/4 cup milk",
-      "1/4 cup shredded cheese (such as cheddar or Swiss)",
-      "1/4 cup diced vegetables (such as bell peppers, onions, and tomatoes)",
-      "Salt and pepper to taste",
-      "1 tablespoon butter or oil for cooking"
-    ],
-    "instructions": "1. In a mixing bowl, beat the eggs and milk until well combined. Season with salt and pepper. 2. Heat 
-     the butter or oil in a non-stick skillet over medium heat. 3. Pour the egg mixture into the skillet. 4. As the eggs 
-     start to set around the edges, use a spatula to gently lift them, allowing the uncooked eggs to flow underneath. 5. 
-     When the omelette is mostly set but still slightly runny on top, sprinkle the shredded cheese and diced vegetables 
-     over one half of the omelette. 6. Carefully fold the other half of the omelette over the filling. 7. Cook for another 
-     minute or until the cheese is melted and the omelette is cooked through. 8. Slide the omelette onto a plate and serve 
-    immediately.",
-  "image_url": "https://example.com/omelette_image.jpg"
+    "recipeId": "updated_recipe_id",
+    "title": "Chicken Alfredo Pasta",
+    "ingredients": ["8 oz pasta (fettuccine or spaghetti)", "2 boneless, skinless chicken breasts, thinly sliced", "2 
+    tablespoons olive oil", "3 cloves garlic, minced", "1 cup heavy cream", "1/2 cup grated Parmesan cheese", "Salt and 
+    pepper to taste", "Chopped parsley for garnish (optional)"],
+    "instructions": "1. Cook pasta according to package instructions. 2. In a large skillet, heat olive oil over medium-
+    high heat. 3. Add minced garlic and sauté until fragrant. 4. Add sliced chicken breasts and cook until no longer pink. 
+    5. Reduce heat to medium-low. 6. Add heavy cream and grated Parmesan cheese. 7. Simmer until sauce thickens. 8. 
+    Season with salt and pepper. 9. Add cooked pasta to the skillet and toss to coat in sauce. 10. Serve hot with chopped 
+    parsley on top. 11. Enjoy!",
+    "imageURL": "https://example.com/chicken-alfredo-pasta.jpg"
   }
 
 #### 5.4. Delete Recipe
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
-| /courses/{courseId}/categories/{categoryId}/recipes/{recipeId}  | DELETE   | Deletes a recipe from a category of a culinary course. This function allows administrators to remove recipes that are no longer needed or relevant, ensuring that the recipe database remains well-curated and free from outdated or redundant entries.| Required (Bearer Token)|
+| /courses/{courseId}/categories/{categoryId}/recipes/{recipeId}  | DELETE   | Deletes a specific recipe from a category of a culinary course. This function allows administrators to remove recipes that are no longer offered or relevant, helping maintain an up-to-date and relevant collection of recipes for users to explore.| Required (Bearer Token)|
 
 ##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
 | courseId   | string    | Unique identifier of the course.|
-| categoryId | string    | Unique identifier for the recipe category.|
-| recipeId   | string    | Unique identifier for the recipe to update.|
+| categoryId | string    | Unique identifier of the category.|
+| recipeId   | string    | Unique identifier of the recipe to delete.|
 
 - **Response:** HTTP Status Code 204 (No Content)
 ## Conclusion
