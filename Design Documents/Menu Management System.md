@@ -57,7 +57,7 @@ This design document outlines the specifications and design considerations for t
 ----------------------------------------------------------------------------------------
 - **Entity Library**: Contains classes and methods for menu item management.
 ### Entity Library: Menu Management
------------------------------------------------------------------------------------------
+
 1. **Class Name**: MenuItem
    - **Methods**:
      - `getName()`: Retrieves the name of the menu item.
