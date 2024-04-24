@@ -5,7 +5,7 @@ The task management system is designed to help users organize, track, and manage
 ## 2. Database Schema
 ----------------------------------------------------------------
 ### 2.1. Users Table
------------------------------------------------------------------
+
 | Field      | Type        | Description           |
 |------------|-------------|-----------------------|
 | user_id    | INT         | Unique user identifier|
@@ -14,7 +14,7 @@ The task management system is designed to help users organize, track, and manage
 | password   | VARCHAR(100)| Hashed password       |
 | created_at | TIMESTAMP   | Timestamp of creation |
 ### 2.2. Tasks Table
----------------------------------------------------------------------
+
 | Field         | Type        | Description                 |
 |---------------|-------------|-----------------------------|
 | task_id       | INT         | Unique task identifier      |
@@ -29,7 +29,7 @@ The task management system is designed to help users organize, track, and manage
 ## 3. Procedures
 -------------------------------------------------------------------
 ### 3.1. Add Task
-------------------------------------------------------------------
+
 ```sql
 PROCEDURE add_task(
     IN p_user_id INT,
@@ -44,7 +44,7 @@ BEGIN
 END;
 ```
 ### 3.2. Update Task
--------------------------------------------------
+
 ```sql
 PROCEDURE update_task(
     IN p_task_id INT,
@@ -66,7 +66,7 @@ BEGIN
 END;
 ```
 ### 3.3. Delete Task
--------------------------------------------------------
+
 ```sql
 PROCEDURE delete_task(
     IN p_task_id INT
