@@ -1,6 +1,6 @@
 # Banking Application User Manual
 ## Table of Contents
-- [Introduction](#1-introduction)
+1. [Introduction](#1-introduction)
 2. [Getting Started](#2-getting-started)
 3. [Login and Authentication](#3-login-and-authentication)
 4. [Dashboard](#4-dashboard)
