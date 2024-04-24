@@ -9,7 +9,7 @@
   - [User Management](#user-management)
   - [Culinary Courser](#culinary-courses)
   - [Recipe Categories](#recipe-categories)
-  - [Recipes)(#recipes)
+  - [Recipes](#recipes)
 - [Conclusion](#conclusion)
 ## Introduction
 -------------------------------------
