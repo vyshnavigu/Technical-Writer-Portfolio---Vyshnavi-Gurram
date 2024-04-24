@@ -11,7 +11,7 @@ https://app.swaggerhub.com/apis-docs/VYSHNAVIGU_1/CulinaryCourseAPI/9.9.9
 ## Authentication
 ------------------------------------------------------
 To access most endpoints of this API, you need to authenticate using JWT (JSON Web Tokens). You can obtain a token by logging in with your credentials.
-## API functions
+## API Functions
 -----------------------------------------------------
 
 Ref   | Function                 | Description                                  | API End Point                                              | Request Type
@@ -37,12 +37,12 @@ Ref   | Function                 | Description                                  
 
 ## Endpoints
 ---------------------------------------------------------------
-### 1.1. Login
+#### 1.1. Login
 
 | End Point | Method | Description |
 |-----------|--------|-------------|
 | /login    | POST   | Creates a new user account with the provided username and password. This function allows new users to register for the culinary course platform, providing them access to various features and functionalities. |
-#### Data Object Definition
+##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
@@ -61,7 +61,7 @@ Ref   | Function                 | Description                                  
     "token": "your_access_token"
   }
 
-### 1.2. Logout
+#### 1.2. Logout
 
 | End Point | Method | Description | Authentication |
 |-----------|--------|-------------|----------------|
@@ -77,7 +77,7 @@ Manage user accounts using the following endpoints:
 |-----------|--------|-------------|
 | /users  | POST   | Creates a new user account with the provided username and password. This function allows new users to register for the culinary course platform, providing them access to various features and functionalities.|
 
-#### Data Object Definition
+##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
@@ -103,7 +103,7 @@ Manage user accounts using the following endpoints:
 |-----------|--------|-------------|----------------|
 | /users/{username}  | GET   | Retrieves user details by their username. This function allows administrators or other users to view information about a specific user, such as their ID and username.| Required (Bearer Token)|
 
-#### Data Object Definition
+##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
@@ -122,7 +122,7 @@ Manage user accounts using the following endpoints:
 |-----------|--------|-------------|----------------|
 | /users/{username}  | PUT   | Updates the password of an existing user account. This function enables users to change their passwords for security reasons or due to a forgotten password, providing them with the ability to maintain the security of their accounts.| Required (Bearer Token)|
 
-#### Data Object Definition
+##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
@@ -146,7 +146,7 @@ Manage user accounts using the following endpoints:
 |-----------|--------|-------------|----------------|
 | /users/{username}  | DELETE   | Deletes a user account by their username. This function allows administrators to remove user accounts that are no longer needed or to handle account deletions requested by users, ensuring proper management of user data.| Required (Bearer Token)|
 
-#### Data Object Definition
+##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
@@ -182,7 +182,7 @@ Manage culinary courses using the following endpoints:
 |-----------|--------|-------------|----------------|
 | /courses  | POST   | Adds a new culinary course with the specified name, description, and price. This function enables administrators to expand the catalog of available courses by creating new ones, providing users with more options to choose from.| Required (Bearer Token)|
 
-#### Data Object Definition
+##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
@@ -212,7 +212,7 @@ Manage culinary courses using the following endpoints:
 |-----------|--------|-------------|----------------|
 | /courses/{courseId}  | GET   | Retrieves details of a specific culinary course by its ID. This function allows users to view comprehensive information about a particular course, including its name, description, and price, helping them make informed decisions about enrollment.| Required (Bearer Token)|
 
-#### Data Object Definition
+##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
@@ -233,7 +233,7 @@ Manage culinary courses using the following endpoints:
 |-----------|--------|-------------|----------------|
 | /courses/{courseId}  | PUT   | Updates the details of an existing culinary course, including its name, description, and price. This function enables administrators to modify course information as needed, such as updating course content, adjusting pricing, or refining course descriptions.| Required (Bearer Token)|
 
-#### Data Object Definition
+##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
@@ -264,7 +264,7 @@ Manage culinary courses using the following endpoints:
 |-----------|--------|-------------|----------------|
 | /courses/{courseId}  | DELETE   | Deletes a culinary course by its ID. This function allows administrators to remove courses that are no longer offered or relevant, ensuring that the course catalog remains up-to-date and streamlined.| Required (Bearer Token)|
 
-#### Data Object Definition
+##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
@@ -282,7 +282,7 @@ Manage recipe categories within culinary courses using the following endpoints:
 |-----------|--------|-------------|----------------|
 | /courses/{courseId}/categories  | GET   | Retrieves a list of categories within a specific culinary course. This function provides users with an overview of the different recipe categories available within a course, allowing them to explore recipes based on their interests or preferences.| Required (Bearer Token)|
 
-#### Data Object Definition
+##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
@@ -304,7 +304,7 @@ Manage recipe categories within culinary courses using the following endpoints:
 |-----------|--------|-------------|----------------|
 | /courses/{courseId}/categories  | POST   | Adds a new category to a specific culinary course. This function enables administrators to organize recipes into distinct categories, facilitating easier navigation and exploration for users looking for specific types of recipes.| Required (Bearer Token)|
 
-#### Data Object Definition
+##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
@@ -329,7 +329,7 @@ Manage recipe categories within culinary courses using the following endpoints:
 |-----------|--------|-------------|----------------|
 | /courses/{courseId}/categories/{categoryId}  | DELETE   | Deletes a category from a culinary course. This function allows administrators to remove categories that are no longer needed or relevant, helping maintain a well-organized and efficient categorization system for recipes.| Required (Bearer Token)|
 
-#### Data Object Definition
+##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
@@ -348,7 +348,7 @@ Manage recipes within recipe categories using the following endpoints:
 |-----------|--------|-------------|----------------|
 | /courses/{courseId}/categories/{categoryId}/recipes  | GET   | Retrieves a list of recipes within a specific category of a culinary course. This function provides users with access to a curated list of recipes belonging to a particular category, enabling them to discover and explore recipes tailored to their preferences.| Required (Bearer Token)|
 
-#### Data Object Definition
+##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
@@ -379,7 +379,7 @@ Manage recipes within recipe categories using the following endpoints:
 |-----------|--------|-------------|----------------|
 | /courses/{courseId}/categories/{categoryId}/recipes  | POST   | Adds a new recipe to a specific category of a culinary course. This function allows administrators to expand the recipe database by adding new recipes, providing users with a diverse selection of culinary creations to explore and try out.| Required (Bearer Token)|
 
-#### Data Object Definition
+##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
@@ -424,7 +424,7 @@ Manage recipes within recipe categories using the following endpoints:
 |-----------|--------|-------------|----------------|
 | /courses/{courseId}/categories/{categoryId}/recipes/{recipeId}  | PUT   | Updates the details of an existing recipe within a category of a culinary course. This function enables administrators to modify recipe information, such as updating recipe titles, ingredients, instructions, or associated images, ensuring accurate and up-to-date recipe content.| Required (Bearer Token)|
 
-#### Data Object Definition
+##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
@@ -478,7 +478,7 @@ Manage recipes within recipe categories using the following endpoints:
 |-----------|--------|-------------|----------------|
 | /courses/{courseId}/categories/{categoryId}/recipes/{recipeId}  | DELETE   | Deletes a recipe from a category of a culinary course. This function allows administrators to remove recipes that are no longer needed or relevant, ensuring that the recipe database remains well-curated and free from outdated or redundant entries.| Required (Bearer Token)|
 
-#### Data Object Definition
+##### Data Object Definition
 
 | Data Field | Data Type | Description |
 |------------|-----------|-------------|
