@@ -1,11 +1,11 @@
 # Release Notes: Version 1.9.8 
 ## Table of Contents
-[Overview](#overview)
-[New Features](#new-features)
-[Enhancements](#enhancements)
-[Bug Fixes](#bug-fixes)
-[Important Information](#important-information)
-[Security Updates](#security-updates)
+- [Overview](#overview)
+- [New Features](#new-features)
+- [Enhancements](#enhancements)
+- [Bug Fixes](#bug-fixes)
+- [Important Information](#important-information)
+- [Security Updates](#security-updates)
 
 ## Overview
 ---------------------------------------------------------------
