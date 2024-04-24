@@ -5,11 +5,11 @@
 - [Authentication](#authentication)
 - [#API Functions](#api-functions)
 - [End Points](#end-points)
- - [Login](#login)
- - [User Management](#user-management)
- - [Culinary Courser](#culinary-courses)
- - [Recipe Categories](#recipe-categories)
- - [Recipes)(#recipes)
+  - [Login](#login)
+  - [User Management](#user-management)
+  - [Culinary Courser](#culinary-courses)
+  - [Recipe Categories](#recipe-categories)
+  - [Recipes)(#recipes)
 - [Conclusion](#conclusion)
 ## Introduction
 -------------------------------------
