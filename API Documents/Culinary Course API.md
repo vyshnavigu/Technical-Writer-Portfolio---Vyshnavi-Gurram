@@ -3,7 +3,7 @@
 - [Introduction](#introduction)
 - [Base URL](#base-url)
 - [Authentication](#authentication)
-- [#API Functions](#api-functions)
+- [API Functions](#api-functions)
 - [End Points](#end-points)
   - [Login](#login)
   - [User Management](#user-management)
