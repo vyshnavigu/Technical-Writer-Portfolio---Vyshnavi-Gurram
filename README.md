@@ -23,6 +23,9 @@ My current professional toolkit includes:
 - GitHub
 - Markdown
 - XML
+## Portfolio
+-------------------------------------------------------------------------------------------
+Explore my technical writing portfolio, showcasing samples of my work at [Portfolio](https://github.com/vyshnavigu/Technical-Writer-Portfolio---Vyshnavi-Gurram/blob/main/Portfolio.md)
 ## License
 -----------------------------------------------------------------------------------------------
 This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License - see the [LICENSE](LICENSE.md) file for details.
