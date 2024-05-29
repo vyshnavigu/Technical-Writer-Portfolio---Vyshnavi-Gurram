@@ -386,9 +386,9 @@ Manage recipes within recipe categories using the following endpoints:
     {
      "recipeId": "recipe_id",
      "title": "Tomato Basil Soup",
-     "ingredients": ["1 can (28 oz) whole peeled tomatoes", "1 small onion, chopped", "2 cloves garlic, minced", "2 cups 
-       vegetable or chicken broth", "1/4 cup fresh basil leaves, chopped", "2 tablespoons olive oil", "Salt and pepper to 
-       taste", "Optional: 1/4 cup heavy cream or coconut milk"],
+     "ingredients": ["1 can (28 oz) whole peeled tomatoes", "1 small onion (chopped)", "2 cloves garlic (minced)", "2 cups 
+       vegetable or chicken broth", "1/4 cup fresh basil leaves (chopped)", "2 tablespoons olive oil", "Salt and pepper to 
+       taste", "1/4 cup heavy cream or coconut milk (optional)"],
      "instructions": "1. Heat olive oil in a large pot over medium heat. 2. Add chopped onion and minced garlic, sauté 
        until soft. 3. Add tomatoes (with juices) and broth, bring to a simmer. 4. Simmer for 15-20 minutes. 5. Blend until 
        smooth. 6. Stir in chopped basil. 7. Season with salt and pepper. 8. Stir in heavy cream or coconut milk if desired. 
@@ -417,8 +417,8 @@ Manage recipes within recipe categories using the following endpoints:
   ```json
   {
     "title": "Pasta Primavera",
-    "ingredients": ["8 oz pasta (linguine or fettuccine work well)", "2 tablespoons olive oil", "3 cloves garlic, minced", 
-    "1 cup cherry tomatoes, halved", "1 cup broccoli florets", "1 cup bell peppers, sliced", "1/2 cup peas", "1/4 cup 
+    "ingredients": ["8 oz pasta (linguine or fettuccine work well)", "2 tablespoons olive oil", "3 cloves garlic (minced)", 
+    "1 cup cherry tomatoes (halved)", "1 cup broccoli florets", "1 cup bell peppers (sliced)", "1/2 cup peas", "1/4 cup 
     grated Parmesan cheese", "Salt and pepper to taste"],
     "instructions": "1. Cook pasta according to package instructions. 2. In a large skillet, heat olive oil over medium 
     heat. 3. Add minced garlic and sauté until fragrant. 4. Add cherry tomatoes, broccoli, bell peppers, and peas. 5. 
@@ -431,8 +431,8 @@ Manage recipes within recipe categories using the following endpoints:
   {
     "recipeId": "new_recipe_id",
     "title": "Pasta Primavera",
-    "ingredients": ["8 oz pasta (linguine or fettuccine work well)", "2 tablespoons olive oil", "3 cloves garlic, minced", 
-    "1 cup cherry tomatoes, halved", "1 cup broccoli florets", "1 cup bell peppers, sliced", "1/2 cup peas", "1/4 cup 
+    "ingredients": ["8 oz pasta (linguine or fettuccine work well)", "2 tablespoons olive oil", "3 cloves garlic (minced)", 
+    "1 cup cherry tomatoes (halved)", "1 cup broccoli florets", "1 cup bell peppers (sliced)", "1/2 cup peas", "1/4 cup 
     grated Parmesan cheese", "Salt and pepper to taste"],
     "instructions": "1. Cook pasta according to package instructions. 2. In a large skillet, heat olive oil over medium 
     heat. 3. Add minced garlic and sauté until fragrant. 4. Add cherry tomatoes, broccoli, bell peppers, and peas. 5. 
@@ -461,8 +461,8 @@ Manage recipes within recipe categories using the following endpoints:
   ```json
   {
     "title": "Chicken Alfredo Pasta",
-    "ingredients": ["8 oz pasta (fettuccine or spaghetti)", "2 boneless, skinless chicken breasts, thinly sliced", "2 
-    tablespoons olive oil", "3 cloves garlic, minced", "1 cup heavy cream", "1/2 cup grated Parmesan cheese", "Salt and 
+    "ingredients": ["8 oz pasta (fettuccine or spaghetti)", "2 boneless, skinless chicken breasts (thinly sliced)", "2 
+    tablespoons olive oil", "3 cloves garlic (minced)", "1 cup heavy cream", "1/2 cup grated Parmesan cheese", "Salt and 
     pepper to taste", "Chopped parsley for garnish (optional)"],
     "instructions": "1. Cook pasta according to package instructions. 2. In a large skillet, heat olive oil over medium-
     high heat. 3. Add minced garlic and sauté until fragrant. 4. Add sliced chicken breasts and cook until no longer pink. 
@@ -476,8 +476,8 @@ Manage recipes within recipe categories using the following endpoints:
   {
     "recipeId": "updated_recipe_id",
     "title": "Chicken Alfredo Pasta",
-    "ingredients": ["8 oz pasta (fettuccine or spaghetti)", "2 boneless, skinless chicken breasts, thinly sliced", "2 
-    tablespoons olive oil", "3 cloves garlic, minced", "1 cup heavy cream", "1/2 cup grated Parmesan cheese", "Salt and 
+    "ingredients": ["8 oz pasta (fettuccine or spaghetti)", "2 boneless, skinless chicken breasts (thinly sliced)", "2 
+    tablespoons olive oil", "3 cloves garlic (minced)", "1 cup heavy cream", "1/2 cup grated Parmesan cheese", "Salt and 
     pepper to taste", "Chopped parsley for garnish (optional)"],
     "instructions": "1. Cook pasta according to package instructions. 2. In a large skillet, heat olive oil over medium-
     high heat. 3. Add minced garlic and sauté until fragrant. 4. Add sliced chicken breasts and cook until no longer pink. 
@@ -502,6 +502,8 @@ Manage recipes within recipe categories using the following endpoints:
 | recipeId   | string    | Unique identifier of the recipe to delete.|
 
 - **Response:** HTTP Status Code 204 (No Content)
+
 ## Conclusion
+--------------------------------------------------------------------------------------
 The API follows a RESTful architecture, with clear and consistent endpoint naming conventions and request/response structures. Input fields for each function are well-defined, ensuring data integrity and consistency throughout interactions with the API. Similarly, output fields provide comprehensive information, allowing users to easily consume and utilize the data returned by API requests.
 Overall, the Culinary Course API provides a robust platform for culinary education and recipe management, empowering developers to build innovative applications and services in the culinary domain.
