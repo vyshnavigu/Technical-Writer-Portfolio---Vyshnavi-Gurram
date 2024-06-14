@@ -14,6 +14,7 @@
                 <xsl:apply-templates select="confluenceandsharepoint/introduction"/>
                 <xsl:apply-templates select="confluenceandsharepoint/similarities"/>
                 <xsl:apply-templates select="confluenceandsharepoint/prosandcons"/>
+                <xsl:apply-templates select="confluenceandsharepoint/conclusion"/>
             </body>
         </html>
     </xsl:template>
@@ -70,5 +71,9 @@
                 </tr>
             </xsl:for-each>
         </table>
+    </xsl:template>
+    <xsl:template match="conclusion">
+        <h2><xsl:value-of select="sectionTitle"/></h2>
+        <p><xsl:value-of select="content"/></p>
     </xsl:template>
 </xsl:stylesheet>
