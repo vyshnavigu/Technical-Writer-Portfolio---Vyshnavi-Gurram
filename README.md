@@ -23,6 +23,7 @@ My current professional toolkit includes:
 - GitHub
 - Markdown
 - XML
+- Oxygen XML Editor
 ## Portfolio
 -------------------------------------------------------------------------------------------
 Explore my technical writing portfolio, showcasing samples of my work at [Portfolio](https://github.com/vyshnavigu/Technical-Writer-Portfolio---Vyshnavi-Gurram/blob/main/Portfolio.md)
