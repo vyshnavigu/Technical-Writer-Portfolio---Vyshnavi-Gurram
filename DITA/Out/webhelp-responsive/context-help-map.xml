@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+   <appContext helpID="introduction" path="introduction.html"/>
+   <appContext helpID="print_statement" path="print_statement.html"/>
+   <appContext helpID="variables_and_data_types" path="variables_and_data_types.html"/>
+   <appContext helpID="numbers_and_casting" path="numbers_and_casting.html"/>
+   <appContext helpID="strings" path="strings.html"/>
+   <appContext helpID="booleans" path="booleans.html"/>
+   <appContext helpID="operators" path="operators.html"/>
+   <appContext helpID="lists" path="lists.html"/>
+   <appContext helpID="tuples" path="tuples.html"/>
+   <appContext helpID="sets" path="sets.html"/>
+   <appContext helpID="dictionaries" path="dictionaries.html"/>
+   <appContext helpID="conditional_statements_if_else"
+               path="conditional_statements_if_else.html"/>
+   <appContext helpID="while_loop" path="while_loop.html"/>
+   <appContext helpID="for_loop" path="for_loop.html"/>
+   <appContext helpID="functions" path="functions.html"/>
+   <appContext helpID="lambda_functions" path="lambda_functions.html"/>
+   <appContext helpID="arrays" path="arrays.html"/>
+   <appContext helpID="classes_objects" path="classes_objects.html"/>
+   <appContext helpID="file_handling" path="file_handling.html"/>
+   <appContext helpID="error_handling" path="error_handling.html"/>
+   <appContext helpID="conclusion" path="conclusion.html"/>
+</map>

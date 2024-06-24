@@ -1,0 +1,149 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="26.1">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Python supports a variety of numbers, including integers, floats, and complex numbers. Python includes built-in numeric types to represent numbers. You can convert between different types using ..."/><meta name="DC.rights.owner" content="(C) Copyright 2024"/><meta name="copyright" content="(C) Copyright 2024"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="numbers_and_casting"/><title>Numbers and Casting</title><!--  Generated with Oxygen version 26.1, build number 2024041900.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="numbers_and_casting-d277e38"/><meta name="wh-source-relpath" content="numbers_and_casting.dita"/><meta name="wh-out-relpath" content="numbers_and_casting.html"/>
+
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/commons.css?buildId=2024041900"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic.css?buildId=2024041900"/>
+
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20240620115658"></script>
+    <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2024041900"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20240620115658"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/commons.js?buildId=2024041900"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/topic.js?buildId=2024041900"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen.css?buildId=2024041900"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2024041900"/></head>
+
+    <body id="numbers_and_casting" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    
+                    <div class=" wh_publication_title "><a href="index.html"><span class="title">Fundamental Python Commands For Everyone</span></a></div>
+                    
+                </div>
+                
+                <button type="button" data-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem"><span id="introduction-d277e11-mi" data-tocid="introduction-d277e11" data-state="leaf" class=" topicref " data-id="introduction"><span class="title"><a href="introduction.html">Introduction</a></span></span></li><li role="menuitem"><span id="print_statement-d277e20-mi" data-tocid="print_statement-d277e20" data-state="leaf" class=" topicref " data-id="print_statement"><span class="title"><a href="print_statement.html">Print Statement</a></span></span></li><li role="menuitem"><span id="variables_and_data_types-d277e29-mi" data-tocid="variables_and_data_types-d277e29" data-state="leaf" class=" topicref " data-id="variables_and_data_types"><span class="title"><a href="variables_and_data_types.html">Variables and Data Types</a></span></span></li><li role="menuitem"><span id="numbers_and_casting-d277e38-mi" data-tocid="numbers_and_casting-d277e38" data-state="leaf" class=" topicref " data-id="numbers_and_casting"><span class="title"><a href="numbers_and_casting.html">Numbers and Casting</a></span></span></li><li role="menuitem"><span id="strings-d277e48-mi" data-tocid="strings-d277e48" data-state="leaf" class=" topicref " data-id="strings"><span class="title"><a href="strings.html">Strings</a></span></span></li><li role="menuitem"><span id="booleans-d277e57-mi" data-tocid="booleans-d277e57" data-state="leaf" class=" topicref " data-id="booleans"><span class="title"><a href="booleans.html">Booleans</a></span></span></li><li role="menuitem"><span id="operators-d277e66-mi" data-tocid="operators-d277e66" data-state="leaf" class=" topicref " data-id="operators"><span class="title"><a href="operators.html">Operators</a></span></span></li><li role="menuitem"><span id="lists-d277e75-mi" data-tocid="lists-d277e75" data-state="leaf" class=" topicref " data-id="lists"><span class="title"><a href="lists.html">Lists</a></span></span></li><li role="menuitem"><span id="tuples-d277e84-mi" data-tocid="tuples-d277e84" data-state="leaf" class=" topicref " data-id="tuples"><span class="title"><a href="tuples.html">Tuples</a></span></span></li><li role="menuitem"><span id="sets-d277e93-mi" data-tocid="sets-d277e93" data-state="leaf" class=" topicref " data-id="sets"><span class="title"><a href="sets.html">Sets</a></span></span></li><li role="menuitem"><span id="dictionaries-d277e103-mi" data-tocid="dictionaries-d277e103" data-state="leaf" class=" topicref " data-id="dictionaries"><span class="title"><a href="dictionaries.html">Dictionaries</a></span></span></li><li role="menuitem"><span id="conditional_statements_if_else-d277e112-mi" data-tocid="conditional_statements_if_else-d277e112" data-state="leaf" class=" topicref " data-id="conditional_statements_if_else"><span class="title"><a href="conditional_statements_if_else.html">Conditional Statements (if--else)</a></span></span></li><li role="menuitem"><span id="while_loop-d277e121-mi" data-tocid="while_loop-d277e121" data-state="leaf" class=" topicref " data-id="while_loop"><span class="title"><a href="while_loop.html">While Loop</a></span></span></li><li role="menuitem"><span id="for_loop-d277e130-mi" data-tocid="for_loop-d277e130" data-state="leaf" class=" topicref " data-id="for_loop"><span class="title"><a href="for_loop.html">For Loop</a></span></span></li><li role="menuitem"><span id="functions-d277e139-mi" data-tocid="functions-d277e139" data-state="leaf" class=" topicref " data-id="functions"><span class="title"><a href="functions.html">Functions</a></span></span></li><li role="menuitem"><span id="lambda_functions-d277e148-mi" data-tocid="lambda_functions-d277e148" data-state="leaf" class=" topicref " data-id="lambda_functions"><span class="title"><a href="lambda_functions.html">Lambda Functions</a></span></span></li><li role="menuitem"><span id="arrays-d277e158-mi" data-tocid="arrays-d277e158" data-state="leaf" class=" topicref " data-id="arrays"><span class="title"><a href="arrays.html">Arrays</a></span></span></li><li role="menuitem"><span id="classes_objects-d277e167-mi" data-tocid="classes_objects-d277e167" data-state="leaf" class=" topicref " data-id="classes_objects"><span class="title"><a href="classes_objects.html">Classes/Objects</a></span></span></li><li role="menuitem"><span id="file_handling-d277e176-mi" data-tocid="file_handling-d277e176" data-state="leaf" class=" topicref " data-id="file_handling"><span class="title"><a href="file_handling.html">File Handling</a></span></span></li><li role="menuitem"><span id="error_handling-d277e185-mi" data-tocid="error_handling-d277e185" data-state="leaf" class=" topicref " data-id="error_handling"><span class="title"><a href="error_handling.html">Error Handling</a></span></span></li><li role="menuitem"><span id="conclusion-d277e194-mi" data-tocid="conclusion-d277e194" data-state="leaf" class=" topicref " data-id="conclusion"><span class="title"><a href="conclusion.html">Conclusion</a></span></span></li></ul></nav>
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li class="active"><div class="topicref" data-id="numbers_and_casting"><div class="title"><a href="numbers_and_casting.html">Numbers and Casting</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-12" id="wh_topic_body">
+                        
+                        
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic topic" role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Numbers and Casting</h1>
+    <div class="- topic/body body">
+        <p class="- topic/p p"> Python supports a variety of numbers, including integers, floats, and complex numbers.
+            Python includes built-in numeric types to represent numbers. You can convert between
+            different types using casting. Casting allows you to convert between different numeric
+            types, such as converting an integer to a float or vice versa.</p>
+        <section class="- topic/section section" id="numbers_and_casting__code_example" data-ofbid="numbers_and_casting__code_example"><h2 class="- topic/title title sectiontitle">Example</h2>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock language-python">
+                
+                <em class="hl-comment"># Example of numbers and casting</em>
+                x = <span class="hl-number">10</span>          <em class="hl-comment"># Integer</em>
+                y = <span class="hl-number">3.14</span>        <em class="hl-comment"># Float</em>
+                z = complex(<span class="hl-number">1</span>, <span class="hl-number">2</span>)  <em class="hl-comment"># Complex number</em>
+                
+            </pre>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank" rel="noopener">&lt;oXygen/&gt; XML WebHelp</a> - Evaluation Version
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>
