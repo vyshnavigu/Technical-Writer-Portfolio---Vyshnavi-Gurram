@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Fundamental Python Commands For Everyone</title>
+    <topicref href="introduction.dita"/>
+    <topicref href="print_statement.dita"/>
+    <topicref href="variables_and_data_types.dita"/>
+    <topicref href="numbers_and_casting.dita"/>
+    <topicref href="strings.dita"/>
+    <topicref href="booleans.dita"/>
+    <topicref href="operators.dita"/>
+    <topicref href="lists.dita"/>
+    <topicref href="tuples.dita"/>
+    <topicref href="sets.dita"/>
+    <topicref href="dictionaries.dita"/>
+    <topicref href="conditional_statements_if_else.dita"/>
+    <topicref href="while_loop.dita"/>
+    <topicref href="for_loop.dita"/>
+    <topicref href="functions.dita"/>
+    <topicref href="lambda_functions.dita"/>
+    <topicref href="arrays.dita"/>
+    <topicref href="classes_objects.dita"/>
+    <topicref href="file_handling.dita"/>
+    <topicref href="error_handling.dita"/>
+    <topicref href="conclusion.dita"/>
+    <data name="css" value="Custom.css"/>
+</map>

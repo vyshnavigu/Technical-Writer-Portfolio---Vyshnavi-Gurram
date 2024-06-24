@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dictionaries">
+    <title>Dictionaries</title>
+    <body>
+        <p>Dictionaries are versatile data structures in Python used to store key-value pairs. They
+            are commonly used for representing structured data and mapping relationships between
+            items.</p>
+        <section id="code_example">
+            <title>Example</title>
+            <codeblock outputclass="language-python">
+                <![CDATA[
+                # Example of dictionaries
+                my_dict = {"name": "John", "age": 30, "city": "New York"}
+                print(my_dict["name"])   # Output: John
+                print(my_dict.get("age")) # Output: 30
+                ]]>
+            </codeblock>
+        </section>
+    </body>
+</topic>

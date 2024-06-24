@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="file_handling">
+    <title>File Handling</title>
+    <body>
+        <p>Python allows you to work with files, such as opening, reading, writing, and closing them
+            using file handling operations. File handling is crucial for reading from and writing to
+            files in Python. It allows you to interact with files on your computer's filesystem.</p>
+        <section id="code_example">
+            <title>Example</title>
+            <codeblock outputclass="language-python">
+                <![CDATA[
+                # Example of file handling
+                file = open("example.txt", "w")
+                file.write("Hello, world!")
+                file.close()
+                ]]>
+            </codeblock>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="conditional_statements_if_else">
+    <title>Conditional Statements (if--else)</title>
+    <body>
+        <p>Conditional statements are used to make decisions in a program. They allow you to execute
+            different blocks of code based on the evaluation of one or more conditions.</p>
+        <section id="code_example">
+            <title>Example</title>
+            <codeblock outputclass="language-python">
+                <![CDATA[
+                # Example of conditional statements
+                x = 10
+                if x > 0:
+                   print("Positive")
+                elif x == 0:
+                   print("Zero")
+                else:
+                   print("Negative")
+                ]]>
+            </codeblock>
+        </section>
+    </body>
+</topic>

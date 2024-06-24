@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="booleans">
+    <title>Booleans</title>
+    <body>
+        <p>In Python, Booleans represent truth values, True or False. They are often used for
+            decision-making in conditional statements and loops to control the flow of execution in
+            a program.</p>
+        <section id="code_example">
+            <title>Example</title>
+            <codeblock outputclass="language-python">
+                <![CDATA[
+                # Example of Booleans
+                is_valid = True
+                if is_valid:
+                  print("Valid")
+                else:
+                  print("Invalid")
+                ]]>
+            </codeblock>
+        </section>
+    </body>
+</topic>

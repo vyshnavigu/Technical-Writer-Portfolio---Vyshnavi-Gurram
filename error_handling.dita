@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="error_handling">
+    <title>Error Handling</title>
+    <body>
+        <p>Python allows you to gracefully manage errors and prevent your program from crashing,
+            using error handling. Error handling allows you to anticipate and handle runtime errors
+            in your code. It ensures that your program continues to run smoothly even when
+            unexpected errors occur. </p>
+        <section id="code_example">
+            <title>Example</title>
+            <codeblock outputclass="language-python">
+                <![CDATA[
+                # Example of error handling
+                try:
+                   result = 10 / 0
+                except ZeroDivisionError:
+                   print("Error: Division by zero!")
+                ]]>
+            </codeblock>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="classes_objects">
+    <title>Classes/Objects</title>
+    <body>
+        <p>Classes are blueprints for creating objects, which are instances of a class. Classes are
+            used to create user-defined data types. They encapsulate data and behavior into a single
+            unit, making code more organized and maintainable.</p>
+        <section id="code_example">
+            <title>Example</title>
+            <codeblock outputclass="language-python">
+                <![CDATA[
+                # Example of defining a class
+                class Person:
+                   def init(self, name, age):
+                      self.name = name
+                      self.age = age
+                   def greet(self):
+                      print("Hello, my name is", self.name)
+                # Example of creating an object
+                person1 = Person("John", 30)
+                person1.greet()  # Output: Hello, my name is John
+                ]]>
+            </codeblock>
+        </section>
+    </body>
+</topic>

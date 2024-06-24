@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="strings">
+    <title>Strings</title>
+    <body>
+        <p>Strings are collecyions of characters contained in quotations. Python uses strings to
+            represent textual data. They support various operations including concatenation,
+            slicing, and formatting. Python provides various string manipulation methods and
+            operations. </p>
+        <section id="code_example">
+            <title>Example</title>
+            <codeblock outputclass="language-python">
+                <![CDATA[
+              # Example of strings
+              name = "John"
+              message = "Hello, " + name + "!"
+              print(message)  # Output: Hello, John!
+                ]]>
+            </codeblock>
+        </section>
+    </body>
+</topic>

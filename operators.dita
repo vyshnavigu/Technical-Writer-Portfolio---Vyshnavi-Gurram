@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="operators">
+    <title>Operators</title>
+    <body>
+        <p>Python supports various operators such as arithmetic, comparison, logical, assignment,
+            and more. Operators are symbols that perform operations on operands.</p>
+        <section id="code_example">
+            <title>Example</title>
+            <codeblock outputclass="language-python">
+                <![CDATA[
+                # Example of operators
+                x = 10
+                y = 3
+                result = x + y    # Addition
+                result = x - y    # Subtraction
+                result = x * y    # Multiplication
+                result = x / y    # Division
+                result = x % y    # Modulus
+                result = x ** y   # Exponentiation
+                ]]>
+            </codeblock>
+        </section>
+    </body>
+</topic>

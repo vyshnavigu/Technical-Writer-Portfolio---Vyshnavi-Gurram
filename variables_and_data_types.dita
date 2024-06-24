@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="variables_and_data_types">
+    <title>Variables and Data Types</title>
+    <body>
+        <p>Python uses variables to store data values. Python supports various data types, including
+            integers, floats, strings, Booleans, and more. Variables allow us to store and
+            manipulate data in our programs. Python is dynamically typed, which means that you don't
+            need to declare a variable's type explicitly. Python determines the type based on the
+            value assigned to it.</p>
+        <section id="code_example">
+            <title>Example</title>
+            <codeblock outputclass="language-python">
+                <![CDATA[
+                # Example of variable declaration and data types
+                x = 10          # Integer
+                y = 3.14        # Float
+                name = "John"   # String
+                is_valid = True # Boolean
+                ]]>
+            </codeblock>
+        </section>
+    </body>
+</topic>

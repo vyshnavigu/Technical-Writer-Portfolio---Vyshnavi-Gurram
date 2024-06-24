@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="lambda_functions">
+    <title>Lambda Functions</title>
+    <body>
+        <p>Lambda functions, also known as anonymous functions, are small, inline functions defined
+            using the lambda keyword. Lambda functions are used to create small, one-line functions
+            without a formal function definition. They are often used in situations where a function
+            is needed for a short period of time.</p>
+        <section id="code_example">
+            <title>Example</title>
+            <codeblock outputclass="language-python">
+                <![CDATA[
+                # Example of lambda function
+                add = lambda x, y: x + y
+                print(add(2, 3))  # Output: 5
+                ]]>
+            </codeblock>
+        </section>
+    </body>
+</topic>

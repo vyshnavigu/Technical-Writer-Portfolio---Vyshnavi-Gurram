@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="numbers_and_casting">
+    <title>Numbers and Casting</title>
+    <body>
+        <p> Python supports a variety of numbers, including integers, floats, and complex numbers.
+            Python includes built-in numeric types to represent numbers. You can convert between
+            different types using casting. Casting allows you to convert between different numeric
+            types, such as converting an integer to a float or vice versa.</p>
+        <section id="code_example">
+            <title>Example</title>
+            <codeblock outputclass="language-python">
+                <![CDATA[
+                # Example of numbers and casting
+                x = 10          # Integer
+                y = 3.14        # Float
+                z = complex(1, 2)  # Complex number
+                ]]>
+            </codeblock>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="introduction">
+    <title>Introduction</title>
+    <body>
+        <p>Python, known for its simplicity and flexibility, is a popular choice among developers
+            from different fields. Learning the basic commands in Python is important for creating
+            strong and effective applications. This article explores the essential Python commands
+            that every developer should understand, providing clear explanations and code
+            examples.</p>
+    </body>
+</topic>

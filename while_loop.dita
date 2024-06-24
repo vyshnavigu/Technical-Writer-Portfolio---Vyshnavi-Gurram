@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="while_loop">
+    <title>While Loop</title>
+    <body>
+        <p>The while loop is used to repeatedly execute a block of code as long as the specified
+            condition is true. It's commonly used when you don't know the exact number of iterations
+            in advance.</p>
+        <section id="code_example">
+            <title>Example</title>
+            <codeblock outputclass="language-python">
+                <![CDATA[
+                # Example of while loop
+                count = 0
+                while count < 5:
+                   print(count)
+                   count += 1  # Output: 0 1 2 3 4
+                ]]>
+            </codeblock>
+        </section>
+    </body>
+</topic>

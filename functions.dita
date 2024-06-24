@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="functions">
+    <title>Functions</title>
+    <body>
+        <p>Functions are blocks of reusable code that perform a specific task. Functions allow you
+            to break down your code into smaller, reusable units. They improve code readability,
+            maintainability, and reusability.</p>
+        <section id="code_example">
+            <title>Example</title>
+            <codeblock outputclass="language-python">
+                <![CDATA[
+                # Example of defining and calling functions
+                def greet(name):
+                   print("Hello, " + name + "!")
+                greet("Alice")   # Output: Hello, Alice!
+                ]]>
+            </codeblock>
+        </section>
+    </body>
+</topic>

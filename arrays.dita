@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="arrays">
+    <title>Arrays</title>
+    <body>
+        <p>Arrays are used to store multiple values in a single variable, similar to lists but with
+            fixed sizes and homogeneous elements. Arrays are used to store collections of elements
+            of the same data type. They are more memory-efficient than lists when dealing with large
+            datasets.</p>
+        <section id="code_example">
+            <title>Example</title>
+            <codeblock outputclass="language-python">
+                <![CDATA[
+                # Example of arrays
+                import array as arr
+                my_array = arr.array('i', [1, 2, 3, 4, 5])
+                print(my_array[0])  # Output: 1
+                ]]>
+            </codeblock>
+        </section>
+    </body>
+</topic>
