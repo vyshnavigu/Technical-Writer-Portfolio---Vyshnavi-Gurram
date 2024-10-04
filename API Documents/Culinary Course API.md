@@ -1,18 +1,5 @@
 # Culinary Course API Documentation
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Base URL](#base-url)
-- [Authentication](#authentication)
-- [API Functions](#api-functions)
-- [Endpoints](#endpoints)
-    - [Login](#1-login)
-    - [User Management](#2-user-management)
-    - [Culinary Courses](#3-culinary-courses)
-    - [Recipe Categories](#4-recipe-categories)
-    - [Recipes](#5-recipes)
-- [Conclusion](#conclusion)
-
 ## Introduction
 -------------------------------------
 Welcome to the Culinary Course API documentation. This API allows you to manage culinary courses, categories, and recipes. Users can interact with the API by creating an account, logging in, and performing various actions. This is an on-demand culinary course that offers customers the flexibility to pay as per their convenience.
@@ -29,27 +16,28 @@ To access most endpoints of this API, you need to authenticate using JWT (JSON W
 
 ## API Functions
 -----------------------------------------------------
+The table below outlines the API functions for the culinary course platform, detailing each function's endpoint, method, authentication requirements, and purpose to ensure smooth integration into your application.
 
-| Ref | Function | API End Point | Request Type | Description |
-|-----|----------|---------------|--------------|--------------|
-| [1.1](#11-login)| Login  | /login | POST | Creates a new user account with the provided username and password. This function allows new users to register for the culinary course platform, providing them access to various features and functionalities. |
-| [1.2](#12-logout)| Logout | /logout | POST | Log out the currently authenticated user.  |
-| [2.1](#21-create-user)| Create User | /users | POST | Creates a new user account with the provided username and password. This function allows new users to register for the culinary course platform, providing them access to various features and functionalities. |
-| [2.2](#22-get-user-by-username)| Get User by Username | /users/{username} | GET | Retrieves user details by their username. This function allows administrators or other users to view information about a specific user, such as their ID and username. |
-| [2.3](#23-update-user)| Update User| /users/{username} | PUT | Update user details. Updates the password of an existing user account. This function enables users to change their passwords for security reasons or due to a forgotten password, providing them with the ability to maintain the security of their accounts. |
-| [2.4](#24-delete-user)| Delete User | /users/{username} | DELETE | Deletes a user account by their username. This function allows administrators to remove user accounts that are no longer needed or to handle account deletions requested by users, ensuring proper management of user data. |
-| [3.1](#31-list-all-courses)| List All Courses | /courses | GET | Retrieves a list of all available culinary courses. This function provides users with an overview of the courses offered on the platform, including their names, descriptions, and prices, allowing them to browse and select courses of interest. |
-| [3.2](#32-create-course)| Create Course | /courses | POST | Adds a new culinary course with the specified name, description, and price. This function enables administrators to expand the catalog of available courses by creating new ones, providing users with more options to choose from. |
-| [3.3](#33-get-course-details)| Get Course Details | /courses/{courseId} | GET | Retrieves details of a specific culinary course by its ID. This function allows users to view comprehensive information about a particular course, including its name, description, and price, helping them make informed decisions about enrollment. |
-| [3.4](#34-update-course) | Update Course | /courses/{courseId} | PUT | Updates the details of an existing culinary course, including its name, description, and price. This function enables administrators to modify course information as needed, such as updating course content, adjusting pricing, or refining course descriptions. |
-| [3.5](#35-delete-course) | Delete Course | /courses/{courseId} | DELETE | Deletes a culinary course by its ID. This function allows administrators to remove courses that are no longer offered or relevant, ensuring that the course catalog remains up-to-date and streamlined. |
-| [4.1](#41-list-categories-in-a-course) | List Categories in a Course | /courses/{courseId}/categories | GET | Retrieves a list of categories within a specific culinary course. This function provides users with an overview of the different recipe categories available within a course, allowing them to explore recipes based on their interests or preferences. |
-| [4.2](#42-create-category) | Create Category | /courses/{courseId}/categories | POST | Adds a new category to a specific culinary course. This function enables administrators to organize recipes into distinct categories, facilitating easier navigation and exploration for users looking for specific types of recipes. |
-| [4.3](#43-delete-category) | Delete Category | /courses/{courseId}/categories/{categoryId} | DELETE | Deletes a category from a culinary course. This function allows administrators to remove categories that are no longer needed or relevant, helping maintain a well-organized and efficient categorization system for recipes. |
-| [5.1](#51-list-recipes-in-a-category) | List Recipes in a Category | /courses/{courseId}/categories/{categoryId}/recipes | GET | Retrieves a list of recipes within a specific category of a culinary course. This function provides users with access to a curated list of recipes belonging to a particular category, enabling them to discover and explore recipes tailored to their preferences. |
-| [5.2](#52-create-recipe) | Create Recipe | /courses/{courseId}/categories/{categoryId}/recipes | POST | Adds a new recipe to a specific category of a culinary course. This function enables administrators to expand the repertoire of available recipes within a category, providing users with a wider selection of culinary options to explore and try out. |
-| [5.3](#53-update-recipe) | Update Recipe | /courses/{courseId}/categories/{categoryId}/recipes/{recipeId} | PUT | Updates the details of a specific recipe within a category of a culinary course. This function enables administrators to modify recipe information as needed, such as correcting errors, updating ingredient lists, or revising cooking instructions. |
-| [5.4](#54-delete-recipe) | Delete Recipe | /courses/{courseId}/categories/{categoryId}/recipes/{recipeId} | DELETE | Deletes a specific recipe from a category of a culinary course. This function allows administrators to remove recipes that are no longer offered or relevant, helping maintain an up-to-date and relevant collection of recipes for users to explore. |
+| Ref  | Function                                | API End Point                           | Method | Authentication                  | Purpose                                                                                      |
+|------|-----------------------------------------|----------------------------------------|--------|----------------------------------|----------------------------------------------------------------------------------------------|
+| [1.1](#11-login)       | Login                                   | /login                                 | POST   | -                                | Enables new users to register and gain access to the culinary course platform.              |
+| [1.2](#12-logout)      | Logout                                  | /logout                                | POST   | Required (Bearer Token)         | Allows users to securely end their session on the platform.                                 |
+| [2.1](#21-create-user) | Create User                            | /users                                 | POST   | -                                | Facilitates the creation of new user accounts for accessing course content.                 |
+| [2.2](#22-get-user-by-username) | Get User by Username               | /users/{username}                     | GET    | Required (Bearer Token)         | Allows administrators to retrieve and review user information.                               |
+| [2.3](#23-update-user) | Update User                            | /users/{username}                     | PUT    | Required (Bearer Token)         | Provides users with the ability to change their password for security.                      |
+| [2.4](#24-delete-user) | Delete User                            | /users/{username}                     | DELETE | Required (Bearer Token)         | Empowers administrators to manage user accounts by removing unnecessary ones.                |
+| [3.1](#31-list-all-courses) | List All Courses                    | /courses                               | GET    | Required (Bearer Token)         | Offers users a comprehensive overview of available culinary courses.                        |
+| [3.2](#32-create-course) | Create Course                         | /courses                               | POST   | Required (Bearer Token)         | Enables the addition of new culinary courses to the platform’s catalog.                     |
+| [3.3](#33-get-course-details) | Get Course Details                 | /courses/{courseId}                   | GET    | Required (Bearer Token)         | Provides detailed insights into a specific course for potential students.                   |
+| [3.4](#34-update-course) | Update Course                        | /courses/{courseId}                   | PUT    | Required (Bearer Token)         | Allows administrators to modify course information to keep it current.                      |
+| [3.5](#35-delete-course) | Delete Course                        | /courses/{courseId}                   | DELETE | Required (Bearer Token)         | Facilitates the removal of outdated or irrelevant courses from the platform.                 |
+| [4.1](#41-list-categories-in-a-course) | List Categories in a Course  | /courses/{courseId}/categories        | GET    | Required (Bearer Token)         | Displays available recipe categories within a course for easier navigation.                 |
+| [4.2](#42-create-category) | Create Category                     | /courses/{courseId}/categories        | POST   | Required (Bearer Token)         | Assists in organizing recipes by adding new categories within courses.                       |
+| [4.3](#43-delete-category) | Delete Category                     | /courses/{courseId}/categories/{categoryId} | DELETE | Required (Bearer Token)         | Allows for the removal of unnecessary categories to maintain organization.                   |
+| [5.1](#51-list-recipes-in-a-category) | List Recipes in a Category    | /courses/{courseId}/categories/{categoryId}/recipes | GET | Required (Bearer Token)         | Provides users with access to recipes under specific categories.                             |
+| [5.2](#52-create-recipe) | Create Recipe                        | /courses/{courseId}/categories/{categoryId}/recipes | POST | Required (Bearer Token)         | Enables the addition of new recipes to enhance the course content.                          |
+| [5.3](#53-update-recipe) | Update Recipe                        | /courses/{courseId}/categories/{categoryId}/recipes/{recipeId} | PUT | Required (Bearer Token)         | Allows for modifications to existing recipes, ensuring accuracy and relevance.               |
+| [5.4](#54-delete-recipe) | Delete Recipe                        | /courses/{courseId}/categories/{categoryId}/recipes/{recipeId} | DELETE | Required (Bearer Token)         | Facilitates the removal of outdated recipes from the course catalog.                         |
 
 ## Endpoints
 ---------------------------------------------------------------
@@ -58,10 +46,7 @@ To access most endpoints of this API, you need to authenticate using JWT (JSON W
 -------------------------------------------------------------
 
 #### 1.1. Login
-
-| End Point | Method |
-|-----------|--------|
-| /login    | POST |
+Creates a new user account with the provided username and password. This function allows new users to register for the culinary course platform, providing them access to various features and functionalities.
 
 ##### Data Object Definition
 
@@ -83,21 +68,14 @@ To access most endpoints of this API, you need to authenticate using JWT (JSON W
   }
 
 #### 1.2. Logout
-
-| End Point | Method | Authentication |
-|-----------|--------|----------------|
-| /logout   | POST   | Required (Bearer Token) |
+Log out the currently authenticated user.
 
 ### 2. User Management
 ----------------------------------------------------
-
 Manage user accounts using the following endpoints:
 
 #### 2.1. Create User
-
-| End Point | Method |
-|-----------|--------|
-| /users  | POST   | 
+Creates a new user account with the provided username and password. This function allows new users to register for the culinary course platform, providing them access to various features and functionalities.
 
 ##### Data Object Definition
 
@@ -120,10 +98,7 @@ Manage user accounts using the following endpoints:
   }
 
 #### 2.2. Get User by Username
-
-| End Point | Method |Authentication |
-|-----------|--------|----------------|
-| /users/{username}  | GET   | Required (Bearer Token)|
+Retrieves user details by their username. This function allows administrators or other users to view information about a specific user, such as their ID and username.
 
 ##### Data Object Definition
 
@@ -139,10 +114,7 @@ Manage user accounts using the following endpoints:
   }
 
 #### 2.3. Update User
-
-| End Point | Method |Authentication |
-|-----------|--------|----------------|
-| /users/{username}  | PUT   | Required (Bearer Token)|
+Update user details. Updates the password of an existing user account. This function enables users to change their passwords for security reasons or due to a forgotten password, providing them with the ability to maintain the security of their accounts.
 
 ##### Data Object Definition
 
@@ -163,10 +135,7 @@ Manage user accounts using the following endpoints:
   }
 
 #### 2.4. Delete User
-
-| End Point | Method | Authentication |
-|-----------|--------|----------------|
-| /users/{username}  | DELETE  | Required (Bearer Token)|
+Deletes a user account by their username. This function allows administrators to remove user accounts that are no longer needed or to handle account deletions requested by users, ensuring proper management of user data.
 
 ##### Data Object Definition
 
@@ -178,15 +147,19 @@ Manage user accounts using the following endpoints:
 
 ### 3. Culinary Courses
 --------------------------------------------------------------------
-
 Manage culinary courses using the following endpoints:
 
 #### 3.1. List All Courses
+Retrieves a list of all available culinary courses. This function provides users with an overview of the courses offered on the platform, including their names, descriptions, and prices, allowing them to browse and select courses of interest.
 
-| End Point | Method |Authentication |
-|-----------|--------|----------------|
-| /courses  | GET   | Required (Bearer Token)|
+##### Data Object Definition
 
+| Data Field | Data Type | Description |
+|------------|-----------|-------------|
+| courseId   | string    | Unique identifier for the course.|
+| name       | string    | Name of the new course.|
+| description| string    | Description of the new course.|
+| price      | float     | Price of the new course.|
 - **Response:**
   ```json
   [
@@ -200,10 +173,7 @@ Manage culinary courses using the following endpoints:
   ]
 
 #### 3.2. Create Course
-
-| End Point | Method | Authentication |
-|-----------|--------|----------------|
-| /courses  | POST   | Required (Bearer Token)|
+Adds a new culinary course with the specified name, description, and price. This function enables administrators to expand the catalog of available courses by creating new ones, providing users with more options to choose from.
 
 ##### Data Object Definition
 
@@ -230,10 +200,7 @@ Manage culinary courses using the following endpoints:
   }
 
 #### 3.3. Get Course Details
-
-| End Point | Method |Authentication |
-|-----------|--------|----------------|
-| /courses/{courseId}  | GET   | Required (Bearer Token)|
+Retrieves details of a specific culinary course by its ID. This function allows users to view comprehensive information about a particular course, including its name, description, and price, helping them make informed decisions about enrollment.
 
 ##### Data Object Definition
 
@@ -251,10 +218,7 @@ Manage culinary courses using the following endpoints:
   }
   
 #### 3.4. Update Course
-
-| End Point | Method |Authentication |
-|-----------|--------|----------------|
-| /courses/{courseId}  | PUT   | Required (Bearer Token)|
+Updates the details of an existing culinary course, including its name, description, and price. This function enables administrators to modify course information as needed, such as updating course content, adjusting pricing, or refining course descriptions.
 
 ##### Data Object Definition
 
@@ -282,10 +246,7 @@ Manage culinary courses using the following endpoints:
   }
 
 #### 3.5. Delete Course
-
-| End Point | Method |Authentication |
-|-----------|--------|----------------|
-| /courses/{courseId}  | DELETE   | Required (Bearer Token)|
+Deletes a culinary course by its ID. This function allows administrators to remove courses that are no longer offered or relevant, ensuring that the course catalog remains up-to-date and streamlined.
 
 ##### Data Object Definition
 
@@ -297,14 +258,10 @@ Manage culinary courses using the following endpoints:
 
 ### 4. Recipe Categories
 ----------------------------------------------------------------
-
 Manage recipe categories within culinary courses using the following endpoints:
 
 #### 4.1. List Categories in a Course
-
-| End Point | Method | Authentication |
-|-----------|--------|----------------|
-| /courses/{courseId}/categories  | GET   | Required (Bearer Token)|
+Retrieves a list of categories within a specific culinary course. This function provides users with an overview of the different recipe categories available within a course, allowing them to explore recipes based on their interests or preferences.
 
 ##### Data Object Definition
 
@@ -323,10 +280,7 @@ Manage recipe categories within culinary courses using the following endpoints:
   ]
 
 #### 4.2. Create Category
-
-| End Point | Method |Authentication |
-|-----------|--------|----------------|
-| /courses/{courseId}/categories  | POST   | Required (Bearer Token)|
+Adds a new category to a specific culinary course. This function enables administrators to organize recipes into distinct categories, facilitating easier navigation and exploration for users looking for specific types of recipes.
 
 ##### Data Object Definition
 
@@ -348,10 +302,7 @@ Manage recipe categories within culinary courses using the following endpoints:
   }
 
 #### 4.3. Delete Category
-
-| End Point | Method | Authentication |
-|-----------|--------|----------------|
-| /courses/{courseId}/categories/{categoryId}  | DELETE  | Required (Bearer Token)|
+Deletes a category from a culinary course. This function allows administrators to remove categories that are no longer needed or relevant, helping maintain a well-organized and efficient categorization system for recipes.
 
 ##### Data Object Definition
 
@@ -364,14 +315,10 @@ Manage recipe categories within culinary courses using the following endpoints:
 
 ### 5. Recipes
 ---------------------------------------------------------
-
 Manage recipes within recipe categories using the following endpoints:
 
 #### 5.1. List Recipes in a Category
-
-| End Point | Method |Authentication |
-|-----------|--------|----------------|
-| /courses/{courseId}/categories/{categoryId}/recipes  | GET   | Required (Bearer Token)|
+Retrieves a list of recipes within a specific category of a culinary course. This function provides users with access to a curated list of recipes belonging to a particular category, enabling them to discover and explore recipes tailored to their preferences.
 
 ##### Data Object Definition
 
@@ -399,10 +346,7 @@ Manage recipes within recipe categories using the following endpoints:
   ]
 
 #### 5.2. Create Recipe
-
-| End Point | Method |Authentication |
-|-----------|--------|-------------|----------------|
-| /courses/{courseId}/categories/{categoryId}/recipes  | POST   | Required (Bearer Token)|
+Adds a new recipe to a specific category of a culinary course. This function enables administrators to expand the repertoire of available recipes within a category, providing users with a wider selection of culinary options to explore and try out.
 
 ##### Data Object Definition
 
@@ -442,10 +386,7 @@ Manage recipes within recipe categories using the following endpoints:
   }
 
 #### 5.3. Update Recipe
-
-| End Point | Method | Authentication |
-|-----------|--------|----------------|
-| /courses/{courseId}/categories/{categoryId}/recipes/{recipeId}  | PUT   | Required (Bearer Token)|
+Updates the details of a specific recipe within a category of a culinary course. This function enables administrators to modify recipe information as needed, such as correcting errors, updating ingredient lists, or revising cooking instructions.
 
 ##### Data Object Definition
 
@@ -488,10 +429,7 @@ Manage recipes within recipe categories using the following endpoints:
   }
 
 #### 5.4. Delete Recipe
-
-| End Point | Method |Authentication |
-|-----------|--------|----------------|
-| /courses/{courseId}/categories/{categoryId}/recipes/{recipeId}  | DELETE   | Required (Bearer Token)|
+Deletes a specific recipe from a category of a culinary course. This function allows administrators to remove recipes that are no longer offered or relevant, helping maintain an up-to-date and relevant collection of recipes for users to explore.
 
 ##### Data Object Definition
 
