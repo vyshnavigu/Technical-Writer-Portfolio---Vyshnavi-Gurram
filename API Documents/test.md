@@ -1,3 +1,4 @@
+```java
 type: "POST",
   data: {
     username: "user123",
